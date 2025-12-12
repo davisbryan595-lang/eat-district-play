@@ -49,7 +49,7 @@ export default function LocationsPage() {
         </section>
 
         {/* Locations */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
             <div className="space-y-16">
               {locations.map((location, index) => (
