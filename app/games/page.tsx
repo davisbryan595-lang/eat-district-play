@@ -56,13 +56,13 @@ export default function GamesPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/bowling-arcade-entertainment.jpg" alt="Games" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4">GAMES & ACTIVITIES</h1>
-            <p className="text-xl text-gray-700">Endless Entertainment Awaits</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">GAMES & ACTIVITIES</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">Endless Entertainment Awaits</p>
           </div>
         </section>
 
