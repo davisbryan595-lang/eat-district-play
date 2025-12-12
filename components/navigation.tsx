@@ -87,10 +87,7 @@ export function Navigation() {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-orange-100 hover:to-pink-100 hover:text-orange-700 font-semibold transition-all"
-                        style={{
-                          animationDelay: `${index * 50}ms`,
-                        }}
+                        className="block px-6 py-3 text-gray-800 hover:bg-gradient-to-r hover:from-[#fd812a]/10 hover:to-pink-100 hover:text-[#fd812a] font-semibold transition-all"
                       >
                         {subItem.name}
                       </Link>
