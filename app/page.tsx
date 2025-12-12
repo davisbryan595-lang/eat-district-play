@@ -319,7 +319,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-b from-pink-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-pink-50 via-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
             What Our <span className="text-[hsl(var(--district-orange))]">Guests</span> Say
