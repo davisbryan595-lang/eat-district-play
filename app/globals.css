@@ -6,12 +6,12 @@
 /* Bright light mode theme with vibrant colors: orange, green, purple, pink */
 :root {
   /* Bright light mode with vibrant colors */
-  --background: oklch(0.98 0.01 264); /* very light blue-white */
-  --foreground: oklch(0.25 0 0); /* dark text */
+  --background: oklch(0.99 0.005 264); /* pure white background */
+  --foreground: oklch(0.2 0 0); /* dark text */
   --card: oklch(1 0 0); /* pure white cards */
-  --card-foreground: oklch(0.25 0 0);
+  --card-foreground: oklch(0.2 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0 0);
+  --popover-foreground: oklch(0.2 0 0);
   --primary: oklch(0.6 0.24 29.234); /* vibrant orange #FF7A3D */
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.65 0.22 137.352); /* vibrant green */
@@ -22,8 +22,8 @@
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6 0.25 340); /* vibrant pink */
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.88 0.03 264);
-  --input: oklch(0.95 0.02 264);
+  --border: oklch(0.92 0.03 264);
+  --input: oklch(0.97 0.02 264);
   --ring: oklch(0.6 0.24 29.234);
   --chart-1: oklch(0.6 0.24 29.234); /* vibrant orange */
   --chart-2: oklch(0.65 0.22 137.352); /* vibrant green */
@@ -31,21 +31,23 @@
   --chart-4: oklch(0.6 0.25 340); /* vibrant pink */
   --chart-5: oklch(0.65 0.2 264.052); /* vibrant blue */
   --radius: 0.5rem;
-  --sidebar: oklch(0.96 0.02 264); /* light background */
-  --sidebar-foreground: oklch(0.25 0 0);
+  --sidebar: oklch(0.98 0.02 264); /* light background */
+  --sidebar-foreground: oklch(0.2 0 0);
   --sidebar-primary: oklch(0.6 0.24 29.234);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.88 0.02 290);
-  --sidebar-accent-foreground: oklch(0.25 0 0);
-  --sidebar-border: oklch(0.88 0.03 264);
+  --sidebar-accent: oklch(0.95 0.02 290);
+  --sidebar-accent-foreground: oklch(0.2 0 0);
+  --sidebar-border: oklch(0.92 0.03 264);
   --sidebar-ring: oklch(0.6 0.24 29.234);
 
   /* Vibrant brand colors */
-  --district-orange: oklch(0.6 0.24 29.234);
-  --district-green: oklch(0.65 0.22 137.352);
-  --district-purple: oklch(0.55 0.25 290);
-  --district-pink: oklch(0.6 0.25 340);
-  --district-blue: oklch(0.65 0.2 264.052);
+  --district-orange: 29 100% 57%;
+  --district-green: 140 75% 52%;
+  --district-purple: 270 85% 46%;
+  --district-pink: 340 95% 52%;
+  --district-blue: 210 90% 50%;
+  --district-red: 0 95% 52%;
+  --district-gold: 40 95% 52%;
 }
 
 .dark {

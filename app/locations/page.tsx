@@ -38,52 +38,52 @@ export default function LocationsPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-black">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/modern-entertainment-venue-exterior.jpg" alt="Locations" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-white mb-4">OUR LOCATIONS</h1>
-            <p className="text-xl text-gray-300">Visit Us in Florida or Kansas</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">OUR LOCATIONS</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">Visit Us in Florida or Kansas</p>
           </div>
         </section>
 
         {/* Locations */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
             <div className="space-y-16">
               {locations.map((location, index) => (
                 <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   {/* Info Card */}
-                  <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-red))]/30 p-8">
-                    <h2 className="font-mono text-4xl font-bold text-white mb-6">
-                      <span className="text-[hsl(var(--district-red))]">{location.city}</span>
+                  <Card className={`bg-gradient-to-br from-white p-8 border-4 transition-all hover:shadow-lg ${index === 0 ? "to-orange-100 border-orange-400 hover:border-orange-500" : "to-purple-100 border-purple-400 hover:border-purple-500"}`}>
+                    <h2 className="font-mono text-4xl font-bold text-gray-900 mb-6">
+                      <span className={index === 0 ? "text-orange-600" : "text-purple-600"}>{location.city}</span>
                     </h2>
 
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                        <MapPin className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
                         <div>
-                          <h3 className="font-semibold text-white mb-1">Address</h3>
-                          <p className="text-gray-400">{location.address}</p>
+                          <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
+                          <p className="text-gray-700 font-semibold">{location.address}</p>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <Phone className="w-6 h-6 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                        <Phone className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
                         <div>
-                          <h3 className="font-semibold text-white mb-1">Phone</h3>
-                          <a href={`tel:${location.phone}`} className="text-[hsl(var(--district-red))] hover:underline">
+                          <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
+                          <a href={`tel:${location.phone}`} className={`font-bold hover:underline ${index === 0 ? "text-orange-600" : "text-purple-600"}`}>
                             {location.phone}
                           </a>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <Clock className="w-6 h-6 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                        <Clock className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
                         <div>
-                          <h3 className="font-semibold text-white mb-2">Hours</h3>
-                          <div className="space-y-1 text-gray-400">
+                          <h3 className="font-semibold text-gray-900 mb-2">Hours</h3>
+                          <div className="space-y-1 text-gray-700 font-semibold">
                             <p>{location.hours.weekday}</p>
                             <p>{location.hours.weekend}</p>
                             <p>{location.hours.sunday}</p>
@@ -93,11 +93,11 @@ export default function LocationsPage() {
                     </div>
 
                     <div className="mt-8 flex gap-4">
-                      <Button className="flex-1 bg-[hsl(var(--district-red))]">
+                      <Button className={`flex-1 font-bold text-white ${index === 0 ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700" : "bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"}`}>
                         <NavigationIcon className="w-4 h-4 mr-2" />
                         Get Directions
                       </Button>
-                      <Button variant="outline" className="flex-1 bg-transparent">
+                      <Button variant="outline" className={`flex-1 font-bold border-2 ${index === 0 ? "border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white" : "border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white"}`}>
                         Call Now
                       </Button>
                     </div>
@@ -123,11 +123,11 @@ export default function LocationsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-[hsl(var(--district-red))] to-[hsl(var(--district-blue))]">
+        <section className="py-16 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="font-mono text-3xl md:text-4xl font-bold text-white mb-4">Can't Wait to Visit?</h3>
-            <p className="text-white/90 mb-6 text-lg">Book your experience online or give us a call</p>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+            <h3 className="font-mono text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">Can't Wait to Visit?</h3>
+            <p className="text-white/98 mb-6 text-lg font-semibold drop-shadow-md">Book your experience online or give us a call</p>
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-bold shadow-lg hover:shadow-xl transition-all">
               Book Now
             </Button>
           </div>

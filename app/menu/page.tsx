@@ -88,35 +88,35 @@ export default function MenuPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-orange-50 to-pink-50">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-yellow-200 via-orange-200 to-pink-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/restaurant-food-drinks-on-table.jpg" alt="Menu" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4">OUR MENU</h1>
-            <p className="text-xl text-gray-700">Fuel Your Fun with Bold Flavors</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">OUR MENU</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">Fuel Your Fun with Bold Flavors</p>
           </div>
         </section>
 
         {/* Food Menu */}
-        <section id="food" className="py-20 bg-gradient-to-b from-white to-blue-50">
+        <section id="food" className="py-20 bg-gradient-to-b from-white via-orange-50 to-yellow-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
               <span className="text-[hsl(var(--district-orange))]">Food</span> Menu
             </h2>
 
             <Tabs defaultValue="appetizers" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-gray-200 mb-8">
-                <TabsTrigger value="appetizers" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-orange-200 mb-8 border-2 border-orange-400">
+                <TabsTrigger value="appetizers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Appetizers
                 </TabsTrigger>
-                <TabsTrigger value="burgers" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+                <TabsTrigger value="burgers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Burgers
                 </TabsTrigger>
-                <TabsTrigger value="pizza" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+                <TabsTrigger value="pizza" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Pizza
                 </TabsTrigger>
-                <TabsTrigger value="entrees" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+                <TabsTrigger value="entrees" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Entrées
                 </TabsTrigger>
               </TabsList>
@@ -127,13 +127,13 @@ export default function MenuPage() {
                     {items.map((item, index) => (
                       <Card
                         key={index}
-                        className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/20 p-6 hover:border-[hsl(var(--district-orange))]/60 transition-colors shadow-md"
+                        className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-6 hover:border-orange-500 transition-all shadow-md hover:shadow-lg"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-mono text-xl font-bold text-gray-900">{item.name}</h3>
-                          <span className="text-[hsl(var(--district-orange))] font-bold text-lg">{item.price}</span>
+                          <span className="text-orange-600 font-bold text-lg">{item.price}</span>
                         </div>
-                        <p className="text-gray-700">{item.description}</p>
+                        <p className="text-gray-700 font-semibold">{item.description}</p>
                       </Card>
                     ))}
                   </div>
@@ -144,21 +144,21 @@ export default function MenuPage() {
         </section>
 
         {/* Drinks Menu */}
-        <section id="drinks" className="py-20 bg-gradient-to-b from-blue-50 to-pink-50">
+        <section id="drinks" className="py-20 bg-gradient-to-b from-green-50 to-purple-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
               <span className="text-[hsl(var(--district-green))]">Drinks</span> Menu
             </h2>
 
             <Tabs defaultValue="cocktails" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 bg-gray-200 mb-8">
-                <TabsTrigger value="cocktails" className="data-[state=active]:bg-[hsl(var(--district-green))] data-[state=active]:text-white">
+              <TabsList className="grid w-full grid-cols-3 bg-green-200 mb-8 border-2 border-green-400">
+                <TabsTrigger value="cocktails" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
                   Cocktails
                 </TabsTrigger>
-                <TabsTrigger value="beer" className="data-[state=active]:bg-[hsl(var(--district-green))] data-[state=active]:text-white">
+                <TabsTrigger value="beer" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
                   Beer
                 </TabsTrigger>
-                <TabsTrigger value="specials" className="data-[state=active]:bg-[hsl(var(--district-green))] data-[state=active]:text-white">
+                <TabsTrigger value="specials" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
                   Specials
                 </TabsTrigger>
               </TabsList>
@@ -169,13 +169,13 @@ export default function MenuPage() {
                     {items.map((item, index) => (
                       <Card
                         key={index}
-                        className="bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/20 p-6 hover:border-[hsl(var(--district-green))]/60 transition-colors shadow-md"
+                        className="bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-6 hover:border-green-500 transition-all shadow-md hover:shadow-lg"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-mono text-xl font-bold text-gray-900">{item.name}</h3>
-                          <span className="text-[hsl(var(--district-green))] font-bold text-lg">{item.price}</span>
+                          <span className="text-green-600 font-bold text-lg">{item.price}</span>
                         </div>
-                        <p className="text-gray-700">{item.description}</p>
+                        <p className="text-gray-700 font-semibold">{item.description}</p>
                       </Card>
                     ))}
                   </div>
@@ -186,11 +186,11 @@ export default function MenuPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-[hsl(var(--district-orange))] to-[hsl(var(--district-pink))]">
+        <section className="py-16 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="font-mono text-3xl font-bold text-white mb-4">Ready to Order?</h3>
-            <p className="text-white/90 mb-6">Visit us or call ahead for takeout</p>
-            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold">
+            <h3 className="font-mono text-3xl font-bold text-white mb-4 drop-shadow-lg">Ready to Order?</h3>
+            <p className="text-white/98 mb-6 font-semibold drop-shadow-md">Visit us or call ahead for takeout</p>
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-bold shadow-lg hover:shadow-xl transition-all">
               Call: 407-666-3002
             </Button>
           </div>

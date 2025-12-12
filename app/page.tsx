@@ -91,7 +91,7 @@ export default function HomePage() {
       <Navigation />
 
       {/* Hero Section with Video Background */}
-      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
+      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-yellow-50 via-orange-100 to-pink-100">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-orange-100/50 to-purple-100/50 z-10" />
@@ -126,7 +126,7 @@ export default function HomePage() {
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white text-lg px-8 py-6 animate-orange-glow"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all animate-orange-glow"
               asChild
             >
               <Link href="/contact">Book Your Experience</Link>
@@ -134,7 +134,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg px-8 py-6 bg-white"
+              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white text-lg px-8 py-6 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/menu">View Menu</Link>
@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white to-blue-50">
+      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
             Experience The <span className="text-[hsl(var(--district-orange))]">Ultimate</span> Entertainment
@@ -159,9 +159,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Food Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-orange))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-orange))]/25 transition-colors">
-                <Utensils className="w-10 h-10 text-[hsl(var(--district-orange))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center mb-6 group-hover:from-orange-300 group-hover:to-orange-400 transition-all">
+                <Utensils className="w-10 h-10 text-orange-600 font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">FOOD</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -170,7 +170,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-orange))] hover:text-white hover:bg-[hsl(var(--district-orange))]/20 p-0"
+                className="text-orange-600 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#food">
@@ -180,9 +180,9 @@ export default function HomePage() {
             </Card>
 
             {/* Drinks Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-green))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-green))]/25 transition-colors">
-                <Wine className="w-10 h-10 text-[hsl(var(--district-green))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-green-500">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center mb-6 group-hover:from-green-300 group-hover:to-green-400 transition-all">
+                <Wine className="w-10 h-10 text-green-600 font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">DRINKS</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -191,7 +191,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-green))] hover:text-white hover:bg-[hsl(var(--district-green))]/20 p-0"
+                className="text-green-600 hover:text-white hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#drinks">
@@ -201,9 +201,9 @@ export default function HomePage() {
             </Card>
 
             {/* Games Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-purple-50 border-[hsl(var(--district-purple))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-purple))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-purple))]/25 transition-colors">
-                <Gamepad2 className="w-10 h-10 text-[hsl(var(--district-purple))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-purple-500">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center mb-6 group-hover:from-purple-300 group-hover:to-purple-400 transition-all">
+                <Gamepad2 className="w-10 h-10 text-purple-600 font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">GAMES</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -212,7 +212,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-purple))] hover:text-white hover:bg-[hsl(var(--district-purple))]/20 p-0"
+                className="text-purple-600 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/games">
@@ -225,7 +225,7 @@ export default function HomePage() {
       </section>
 
       {/* Events Carousel */}
-      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-blue-50 to-pink-50">
+      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4">
             <span className="text-[hsl(var(--district-orange))]">Featured</span> Events
@@ -233,7 +233,7 @@ export default function HomePage() {
           <p className="text-center text-gray-700 text-lg mb-12">Never a dull moment at District</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="event-card bg-white border-[hsl(var(--district-orange))]/20 overflow-hidden group shadow-lg">
+            <Card className="event-card bg-white border-4 border-orange-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-orange-500 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/bowling-lanes-neon-lights.jpg"
@@ -242,7 +242,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[hsl(var(--district-orange))] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     FRIDAYS
                   </span>
                 </div>
@@ -250,14 +250,14 @@ export default function HomePage() {
               <div className="p-6">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Cosmic Bowling Night</h3>
                 <p className="text-gray-700 mb-4">Glow-in-the-dark bowling with DJ and drink specials</p>
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <Calendar className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
+                  <Calendar className="w-4 h-4 text-orange-500" />
                   <span>Every Friday, 9PM - 1AM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-white border-[hsl(var(--district-green))]/20 overflow-hidden group shadow-lg">
+            <Card className="event-card bg-white border-4 border-green-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-green-500 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/arcade-games-retro-neon.jpg"
@@ -266,7 +266,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[hsl(var(--district-green))] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     THURSDAYS
                   </span>
                 </div>
@@ -274,14 +274,14 @@ export default function HomePage() {
               <div className="p-6">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Retro Game Night</h3>
                 <p className="text-gray-700 mb-4">Classic arcade tournaments with prizes</p>
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <Calendar className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
+                  <Calendar className="w-4 h-4 text-green-500" />
                   <span>Every Thursday, 7PM - 11PM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-white border-[hsl(var(--district-purple))]/20 overflow-hidden group shadow-lg">
+            <Card className="event-card bg-white border-4 border-purple-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-purple-500 transition-all">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/sports-bar-game-watching-crowd.jpg"
@@ -290,7 +290,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[hsl(var(--district-purple))] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-purple-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     GAME DAYS
                   </span>
                 </div>
@@ -298,8 +298,8 @@ export default function HomePage() {
               <div className="p-6">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Game Day Watch Parties</h3>
                 <p className="text-gray-700 mb-4">Big screens, cold drinks, and game-day specials</p>
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <Calendar className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
+                  <Calendar className="w-4 h-4 text-purple-500" />
                   <span>All Major Sporting Events</span>
                 </div>
               </div>
@@ -309,7 +309,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button
               size="lg"
-              className="bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white px-8"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="/events">View All Events</Link>
@@ -319,7 +319,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-b from-pink-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-pink-50 via-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
             What Our <span className="text-[hsl(var(--district-orange))]">Guests</span> Say
@@ -345,18 +345,18 @@ export default function HomePage() {
             ].map((review, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/20 p-6 shadow-lg"
+                className="bg-gradient-to-br from-white to-orange-100 border-4 border-pink-400 p-6 shadow-lg hover:shadow-xl hover:border-pink-500 transition-all"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-[hsl(var(--district-pink))] text-[hsl(var(--district-pink))]"
+                      className="w-5 h-5 fill-pink-500 text-pink-500"
                     />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">{review.text}</p>
-                <p className="font-semibold text-gray-900">- {review.name}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed font-medium">{review.text}</p>
+                <p className="font-bold text-gray-900">- {review.name}</p>
               </Card>
             ))}
           </div>
@@ -364,20 +364,20 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[hsl(var(--district-orange))] via-[hsl(var(--district-pink))] to-[hsl(var(--district-purple))]">
+      <section className="py-20 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-mono text-4xl md:text-6xl font-bold text-white mb-6">Ready to Experience District?</h2>
-          <p className="text-xl text-white/95 mb-8 max-w-2xl mx-auto">
+          <h2 className="font-mono text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Ready to Experience District?</h2>
+          <p className="text-xl text-white/98 mb-8 max-w-2xl mx-auto font-semibold drop-shadow-md">
             Book your lane, reserve a party room, or just drop by. We're ready to make your night unforgettable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 font-semibold" asChild>
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all" asChild>
               <Link href="/contact">Book Now</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6 bg-transparent font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6 bg-transparent font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
