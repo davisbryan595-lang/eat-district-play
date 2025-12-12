@@ -74,7 +74,7 @@ export function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="px-4 py-2 text-gray-800 font-semibold text-sm tracking-wide hover:text-[hsl(var(--district-orange))] transition-colors flex items-center gap-1"
+                  className="px-4 py-2 text-gray-800 font-semibold text-sm tracking-wide hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 rounded-lg transition-all flex items-center gap-1"
                 >
                   {item.name}
                   {item.submenu && <ChevronDown className="w-4 h-4" />}
