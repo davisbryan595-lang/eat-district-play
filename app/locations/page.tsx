@@ -55,14 +55,14 @@ export default function LocationsPage() {
               {locations.map((location, index) => (
                 <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   {/* Info Card */}
-                  <Card className={`bg-gradient-to-br from-white p-8 border-4 transition-all hover:shadow-lg ${index === 0 ? "to-orange-100 border-orange-400 hover:border-orange-500" : "to-purple-100 border-purple-400 hover:border-purple-500"}`}>
+                  <Card className={`bg-gradient-to-br from-white p-8 border-4 transition-all hover:shadow-lg ${index === 0 ? "to-orange-100 border-[#fd812a] hover:border-[#fd812a]/80" : "to-cyan-100 border-[#02ffff] hover:border-[#02ffff]/80"}`}>
                     <h2 className="font-mono text-4xl font-bold text-gray-900 mb-6">
-                      <span className={index === 0 ? "text-orange-600" : "text-purple-600"}>{location.city}</span>
+                      <span className={index === 0 ? "text-[#fd812a]" : "text-[#02ffff]"}>{location.city}</span>
                     </h2>
 
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
-                        <MapPin className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
+                        <MapPin className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-[#fd812a]" : "text-[#02ffff]"}`} />
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                           <p className="text-gray-700 font-semibold">{location.address}</p>
@@ -70,17 +70,17 @@ export default function LocationsPage() {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <Phone className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
+                        <Phone className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-[#fd812a]" : "text-[#02ffff]"}`} />
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                          <a href={`tel:${location.phone}`} className={`font-bold hover:underline ${index === 0 ? "text-orange-600" : "text-purple-600"}`}>
+                          <a href={`tel:${location.phone}`} className={`font-bold hover:underline ${index === 0 ? "text-[#fd812a]" : "text-[#02ffff]"}`}>
                             {location.phone}
                           </a>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <Clock className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
+                        <Clock className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-[#fd812a]" : "text-[#02ffff]"}`} />
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-2">Hours</h3>
                           <div className="space-y-1 text-gray-700 font-semibold">
@@ -93,11 +93,11 @@ export default function LocationsPage() {
                     </div>
 
                     <div className="mt-8 flex gap-4">
-                      <Button className={`flex-1 font-bold text-white ${index === 0 ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700" : "bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"}`}>
+                      <Button className={`flex-1 font-bold text-white ${index === 0 ? "bg-gradient-to-r from-[#fd812a] to-orange-600 hover:from-[#fd812a]/90 hover:to-orange-700" : "bg-gradient-to-r from-[#02ffff] to-cyan-400 hover:from-[#02ffff]/90 hover:to-cyan-500"} ${index === 1 ? "text-gray-900" : ""}`}>
                         <NavigationIcon className="w-4 h-4 mr-2" />
                         Get Directions
                       </Button>
-                      <Button variant="outline" className={`flex-1 font-bold border-2 ${index === 0 ? "border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white" : "border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white"}`}>
+                      <Button variant="outline" className={`flex-1 font-bold border-2 ${index === 0 ? "border-[#fd812a] text-[#fd812a] hover:bg-[#fd812a] hover:text-white" : "border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900"}`}>
                         Call Now
                       </Button>
                     </div>
