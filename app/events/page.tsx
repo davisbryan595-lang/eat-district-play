@@ -12,13 +12,13 @@ export default function EventsPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-black">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-pink-200 via-orange-200 to-purple-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/party-celebration-people-having-fun.jpg" alt="Events" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-white mb-4">EVENTS & PARTIES</h1>
-            <p className="text-xl text-gray-300">Make Every Celebration Unforgettable</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">EVENTS & PARTIES</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">Make Every Celebration Unforgettable</p>
           </div>
         </section>
 
