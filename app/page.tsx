@@ -126,7 +126,7 @@ export default function HomePage() {
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white text-lg px-8 py-6 animate-orange-glow"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all animate-orange-glow"
               asChild
             >
               <Link href="/contact">Book Your Experience</Link>
@@ -134,7 +134,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg px-8 py-6 bg-white"
+              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white text-lg px-8 py-6 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/menu">View Menu</Link>
