@@ -154,8 +154,8 @@
   }
 }
 
-.animate-red-glow {
-  animation: redGlow 2s ease-in-out infinite;
+.animate-orange-glow {
+  animation: orangeGlow 2s ease-in-out infinite;
 }
 
 .animate-float {
