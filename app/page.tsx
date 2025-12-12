@@ -246,6 +246,7 @@ export default function HomePage() {
                   src="/bowling-lanes-neon-lights.jpg"
                   alt="Cosmic Bowling"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
@@ -270,6 +271,7 @@ export default function HomePage() {
                   src="/arcade-games-retro-neon.jpg"
                   alt="Retro Game Night"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
@@ -294,6 +296,7 @@ export default function HomePage() {
                   src="/sports-bar-game-watching-crowd.jpg"
                   alt="Watch Party"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
