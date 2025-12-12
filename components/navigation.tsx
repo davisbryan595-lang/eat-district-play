@@ -5,11 +5,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { LoginModal } from "@/components/login-modal"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [loginOpen, setLoginOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
