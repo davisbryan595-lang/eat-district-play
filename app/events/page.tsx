@@ -12,7 +12,7 @@ export default function EventsPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-pink-200 via-orange-200 to-purple-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#fd812a]/20 via-[#ffda00]/20 to-purple-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/party-celebration-people-having-fun.jpg" alt="Events" className="w-full h-full object-cover" />
           </div>
@@ -26,7 +26,7 @@ export default function EventsPage() {
         <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              Perfect For <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Every</span> Occasion
+              Perfect For <span className="bg-gradient-to-r from-[#fd812a] to-[#ffda00] bg-clip-text text-transparent">Every</span> Occasion
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
