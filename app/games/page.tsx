@@ -70,34 +70,44 @@ export default function GamesPage() {
         <section className="py-20 bg-gradient-to-b from-white via-yellow-50 to-purple-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {activities.map((activity, index) => (
-                <Card
-                  key={index}
-                  className={`bg-white border-[hsl(var(--district-${activity.color}))]/30 overflow-hidden group hover:scale-105 transition-transform duration-300 shadow-lg`}
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={activity.image || "/placeholder.svg"}
-                      alt={activity.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="font-mono text-2xl font-bold text-white mb-1">{activity.name}</h3>
-                      <p className={`text-white font-bold drop-shadow-md`}>{activity.price}</p>
+              {activities.map((activity, index) => {
+                const colorMap = {
+                  orange: { border: "border-orange-400 hover:border-orange-500", gradient: "from-orange-500 to-orange-600", bg: "to-orange-100" },
+                  green: { border: "border-green-400 hover:border-green-500", gradient: "from-green-500 to-green-600", bg: "to-green-100" },
+                  purple: { border: "border-purple-400 hover:border-purple-500", gradient: "from-purple-500 to-purple-600", bg: "to-purple-100" },
+                  pink: { border: "border-pink-400 hover:border-pink-500", gradient: "from-pink-500 to-pink-600", bg: "to-pink-100" },
+                  blue: { border: "border-blue-400 hover:border-blue-500", gradient: "from-blue-500 to-blue-600", bg: "to-blue-100" },
+                };
+                const colors = colorMap[activity.color];
+                return (
+                  <Card
+                    key={index}
+                    className={`bg-white border-4 ${colors.border} overflow-hidden group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={activity.image || "/placeholder.svg"}
+                        alt={activity.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <h3 className="font-mono text-2xl font-bold text-white mb-1 drop-shadow-lg">{activity.name}</h3>
+                        <p className={`text-white font-bold drop-shadow-md`}>{activity.price}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-700 mb-4">{activity.description}</p>
-                    <Button
-                      className={`w-full bg-[hsl(var(--district-${activity.color}))] hover:bg-[hsl(var(--district-${activity.color}))]/90 text-white`}
-                      asChild
-                    >
-                      <Link href="/contact">Reserve Now</Link>
-                    </Button>
-                  </div>
-                </Card>
-              ))}
+                    <div className="p-6">
+                      <p className="text-gray-700 mb-4 font-semibold">{activity.description}</p>
+                      <Button
+                        className={`w-full bg-gradient-to-r ${colors.gradient} hover:opacity-90 text-white font-bold transition-all`}
+                        asChild
+                      >
+                        <Link href="/contact">Reserve Now</Link>
+                      </Button>
+                    </div>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
