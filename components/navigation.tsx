@@ -128,7 +128,7 @@ export function Navigation() {
               <div key={item.name} className="py-2">
                 <Link
                   href={item.href}
-                  className="block px-4 py-2 text-gray-800 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 rounded-lg transition-all"
+                  className="block px-4 py-2 text-gray-800 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 rounded-lg transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -139,7 +139,7 @@ export function Navigation() {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-4 py-1 text-sm text-gray-700 hover:text-orange-600 font-semibold"
+                        className="block px-4 py-1 text-sm text-gray-700 hover:text-[#fd812a] font-semibold"
                         onClick={() => setIsOpen(false)}
                       >
                         {subItem.name}
@@ -150,10 +150,10 @@ export function Navigation() {
               </div>
             ))}
             <div className="px-4 mt-4 space-y-2">
-              <Button variant="outline" className="w-full bg-white border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white font-bold" asChild>
+              <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" asChild>
                 <Link href="/contact">Book Now</Link>
               </Button>
-              <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold" asChild>
+              <Button className="w-full bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white font-bold" asChild>
                 <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
               </Button>
             </div>
