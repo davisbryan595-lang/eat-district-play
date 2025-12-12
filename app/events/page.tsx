@@ -30,25 +30,25 @@ export default function EventsPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-gradient-to-br from-white to-pink-100 border-4 border-pink-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-pink-500">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center mx-auto mb-4">
-                  <PartyPopper className="w-8 h-8 text-pink-600" />
+              <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-[#fd812a]/80">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#fd812a]/20 to-[#fd812a]/30 flex items-center justify-center mx-auto mb-4">
+                  <PartyPopper className="w-8 h-8 text-[#fd812a]" />
                 </div>
                 <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Birthday Parties</h3>
                 <p className="text-gray-700 font-semibold">Kids & adults love our birthday packages</p>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-blue-100 border-4 border-blue-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-blue-500">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center mx-auto mb-4">
-                  <Briefcase className="w-8 h-8 text-blue-600" />
+              <Card className="bg-gradient-to-br from-white to-yellow-100 border-4 border-[#ffda00] p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-[#ffda00]/80">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#ffda00]/20 to-[#ffda00]/30 flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="w-8 h-8 text-[#ffda00]" />
                 </div>
                 <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Corporate Events</h3>
                 <p className="text-gray-700 font-semibold">Team building & company celebrations</p>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-yellow-100 border-4 border-yellow-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-yellow-500">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-yellow-600" />
+              <Card className="bg-gradient-to-br from-white to-cyan-100 border-4 border-[#02ffff] p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-[#02ffff]/80">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#02ffff]/20 to-[#02ffff]/30 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-[#02ffff]" />
                 </div>
                 <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Group Outings</h3>
                 <p className="text-gray-700 font-semibold">Friends, family, & social groups</p>
