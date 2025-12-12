@@ -123,11 +123,11 @@ export default function LocationsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-[hsl(var(--district-red))] to-[hsl(var(--district-blue))]">
+        <section className="py-16 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="font-mono text-3xl md:text-4xl font-bold text-white mb-4">Can't Wait to Visit?</h3>
-            <p className="text-white/90 mb-6 text-lg">Book your experience online or give us a call</p>
-            <Button size="lg" className="bg-white text-black hover:bg-gray-100">
+            <h3 className="font-mono text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">Can't Wait to Visit?</h3>
+            <p className="text-white/98 mb-6 text-lg font-semibold drop-shadow-md">Book your experience online or give us a call</p>
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-bold shadow-lg hover:shadow-xl transition-all">
               Book Now
             </Button>
           </div>
