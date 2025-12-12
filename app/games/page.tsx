@@ -67,7 +67,7 @@ export default function GamesPage() {
         </section>
 
         {/* Activities Grid */}
-        <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+        <section className="py-20 bg-gradient-to-b from-white via-yellow-50 to-purple-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {activities.map((activity, index) => (
