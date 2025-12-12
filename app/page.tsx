@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white to-blue-50">
+      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
             Experience The <span className="text-[hsl(var(--district-orange))]">Ultimate</span> Entertainment
