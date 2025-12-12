@@ -135,7 +135,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-300 mt-8 pt-8 text-center text-sm text-gray-700">
+        <div className="border-t-2 border-orange-300 mt-8 pt-8 text-center text-sm text-gray-700 font-semibold">
           <p>&copy; {new Date().getFullYear()} District Eat & Play. All rights reserved.</p>
         </div>
       </div>
