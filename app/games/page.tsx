@@ -57,7 +57,7 @@ export default function GamesPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-purple-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/bowling-arcade-entertainment.jpg" alt="Games" className="w-full h-full object-cover" />
           </div>
@@ -73,10 +73,10 @@ export default function GamesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {activities.map((activity, index) => {
                 const colorMap = {
-                  orange: { border: "border-orange-400 hover:border-orange-500", gradient: "from-orange-500 to-orange-600", bg: "to-orange-100" },
-                  green: { border: "border-green-400 hover:border-green-500", gradient: "from-green-500 to-green-600", bg: "to-green-100" },
+                  orange: { border: "border-[#fd812a] hover:border-[#fd812a]/80", gradient: "from-[#fd812a] to-orange-600", bg: "to-orange-100" },
+                  green: { border: "border-[#ffda00] hover:border-[#ffda00]/80", gradient: "from-[#ffda00] to-yellow-500", bg: "to-yellow-100" },
                   purple: { border: "border-purple-400 hover:border-purple-500", gradient: "from-purple-500 to-purple-600", bg: "to-purple-100" },
-                  pink: { border: "border-pink-400 hover:border-pink-500", gradient: "from-pink-500 to-pink-600", bg: "to-pink-100" },
+                  pink: { border: "border-[#02ffff] hover:border-[#02ffff]/80", gradient: "from-[#02ffff] to-cyan-400", bg: "to-cyan-100" },
                   blue: { border: "border-blue-400 hover:border-blue-500", gradient: "from-blue-500 to-blue-600", bg: "to-blue-100" },
                 };
                 const colors = colorMap[activity.color];
@@ -85,11 +85,12 @@ export default function GamesPage() {
                     key={index}
                     className={`bg-white border-4 ${colors.border} overflow-hidden group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
                   >
-                    <div className="relative h-48 overflow-hidden">
-                      <img
+                    <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                      <Image
                         src={activity.image || "/placeholder.svg"}
                         alt={activity.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
