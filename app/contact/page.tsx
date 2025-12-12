@@ -35,13 +35,13 @@ export default function ContactPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-black">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/placeholder.svg?height=400&width=1600" alt="Contact" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-white mb-4">CONTACT US</h1>
-            <p className="text-xl text-gray-300">Let's Plan Your Perfect Experience</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">CONTACT US</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">Let's Plan Your Perfect Experience</p>
           </div>
         </section>
 
