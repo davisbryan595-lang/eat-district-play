@@ -91,10 +91,10 @@ export default function HomePage() {
       <Navigation />
 
       {/* Hero Section with Video Background */}
-      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-orange-100/50 to-purple-100/50 z-10" />
           <iframe
             className="absolute inset-0 w-full h-full object-cover"
             src="https://www.youtube.com/embed/yygDVuZDgVw?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&playlist=yygDVuZDgVw"
@@ -115,18 +115,18 @@ export default function HomePage() {
             />
           </div>
 
-          <h1 className="hero-tagline font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-wider drop-shadow-lg">
+          <h1 className="hero-tagline font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-4 tracking-wider drop-shadow-lg">
             DISTRICT
           </h1>
 
-          <p className="hero-tagline text-2xl md:text-4xl text-[hsl(var(--district-red))] font-bold mb-12 tracking-wide">
+          <p className="hero-tagline text-2xl md:text-4xl text-[hsl(var(--district-orange))] font-bold mb-12 tracking-wide">
             Eat. Drink. Play. Repeat.
           </p>
 
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-[hsl(var(--district-red))] hover:bg-[hsl(var(--district-red))]/90 text-white text-lg px-8 py-6 animate-red-glow"
+              className="bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white text-lg px-8 py-6 animate-orange-glow"
               asChild
             >
               <Link href="/contact">Book Your Experience</Link>
@@ -134,7 +134,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-6 bg-transparent"
+              className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg px-8 py-6 bg-white"
               asChild
             >
               <Link href="/menu">View Menu</Link>
@@ -144,8 +144,8 @@ export default function HomePage() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-white rounded-full animate-pulse" />
+          <div className="w-6 h-10 border-2 border-gray-800 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-2 bg-gray-800 rounded-full animate-pulse" />
           </div>
         </div>
       </section>
