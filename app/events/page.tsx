@@ -69,7 +69,7 @@ export default function EventsPage() {
         <section className="py-20 bg-gradient-to-b from-purple-50 to-pink-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Weekly</span> Events
+              <span className="bg-gradient-to-r from-[#ffda00] to-[#fd812a] bg-clip-text text-transparent">Weekly</span> Events
             </h2>
 
             <div className="space-y-6 max-w-4xl mx-auto">
