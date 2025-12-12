@@ -144,7 +144,7 @@ export default function MenuPage() {
         </section>
 
         {/* Drinks Menu */}
-        <section id="drinks" className="py-20 bg-gradient-to-b from-blue-50 to-pink-50">
+        <section id="drinks" className="py-20 bg-gradient-to-b from-green-50 to-purple-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
               <span className="text-[hsl(var(--district-green))]">Drinks</span> Menu
