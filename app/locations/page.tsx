@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
@@ -34,6 +35,9 @@ export default function LocationsPage() {
 
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href="/modern-entertainment-venue-exterior.jpg" />
+      </Head>
       <Navigation />
 
       <div className="pt-20">
