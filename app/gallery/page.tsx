@@ -29,7 +29,7 @@ export default function GalleryPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-green-200 via-pink-200 to-orange-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-[#02ffff]/20">
           <div className="absolute inset-0 opacity-30">
             <img src="/placeholder.svg?height=400&width=1600" alt="Gallery" className="w-full h-full object-cover" />
           </div>
@@ -44,7 +44,7 @@ export default function GalleryPage() {
           <div className="container mx-auto px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
               {images.map((image, index) => {
-                const colors = ["border-orange-400", "border-green-400", "border-purple-400", "border-pink-400", "border-blue-400", "border-yellow-400"];
+                const colors = ["border-[#fd812a]", "border-[#ffda00]", "border-[#02ffff]", "border-pink-400", "border-blue-400", "border-purple-400"];
                 const color = colors[index % colors.length];
                 return (
                   <div
@@ -78,7 +78,7 @@ export default function GalleryPage() {
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-white hover:text-[hsl(var(--district-red))] transition-colors"
+              className="absolute top-4 right-4 text-white hover:text-[#fd812a] transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               <X className="w-8 h-8" />
@@ -92,7 +92,7 @@ export default function GalleryPage() {
         )}
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500">
+        <section className="py-16 bg-gradient-to-r from-[#fd812a] via-pink-500 to-[#02ffff]">
           <div className="container mx-auto px-4 text-center">
             <h3 className="font-mono text-3xl font-bold text-white mb-4 drop-shadow-lg">Ready to Create Your Own Memories?</h3>
             <p className="text-white/98 mb-6 font-semibold drop-shadow-md">Come experience District for yourself</p>

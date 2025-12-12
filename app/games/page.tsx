@@ -2,6 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function GamesPage() {
@@ -56,7 +57,7 @@ export default function GamesPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-yellow-200 via-pink-200 to-purple-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-purple-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/bowling-arcade-entertainment.jpg" alt="Games" className="w-full h-full object-cover" />
           </div>
@@ -72,10 +73,10 @@ export default function GamesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {activities.map((activity, index) => {
                 const colorMap = {
-                  orange: { border: "border-orange-400 hover:border-orange-500", gradient: "from-orange-500 to-orange-600", bg: "to-orange-100" },
-                  green: { border: "border-green-400 hover:border-green-500", gradient: "from-green-500 to-green-600", bg: "to-green-100" },
+                  orange: { border: "border-[#fd812a] hover:border-[#fd812a]/80", gradient: "from-[#fd812a] to-orange-600", bg: "to-orange-100" },
+                  green: { border: "border-[#ffda00] hover:border-[#ffda00]/80", gradient: "from-[#ffda00] to-yellow-500", bg: "to-yellow-100" },
                   purple: { border: "border-purple-400 hover:border-purple-500", gradient: "from-purple-500 to-purple-600", bg: "to-purple-100" },
-                  pink: { border: "border-pink-400 hover:border-pink-500", gradient: "from-pink-500 to-pink-600", bg: "to-pink-100" },
+                  pink: { border: "border-[#02ffff] hover:border-[#02ffff]/80", gradient: "from-[#02ffff] to-cyan-400", bg: "to-cyan-100" },
                   blue: { border: "border-blue-400 hover:border-blue-500", gradient: "from-blue-500 to-blue-600", bg: "to-blue-100" },
                 };
                 const colors = colorMap[activity.color];
@@ -84,11 +85,12 @@ export default function GamesPage() {
                     key={index}
                     className={`bg-white border-4 ${colors.border} overflow-hidden group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
                   >
-                    <div className="relative h-48 overflow-hidden">
-                      <img
+                    <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                      <Image
                         src={activity.image || "/placeholder.svg"}
                         alt={activity.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
@@ -116,32 +118,32 @@ export default function GamesPage() {
         <section className="py-20 bg-gradient-to-b from-purple-50 to-pink-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              <span className="text-[hsl(var(--district-orange))]">Party</span> Packages
+              <span className="text-[#fd812a]">Party</span> Packages
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 shadow-lg hover:shadow-xl hover:border-orange-500 transition-all">
+              <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-8 shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Basic Package</h3>
-                <p className="text-4xl font-bold text-orange-600 mb-6">$299</p>
+                <p className="text-4xl font-bold text-[#fd812a] mb-6">$299</p>
                 <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 2 hours of bowling (up to 10 people)</li>
                   <li>• Pizza & soft drinks</li>
                   <li>• $20 arcade card</li>
                   <li>• Private party area</li>
                 </ul>
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold transition-all" asChild>
+                <Button className="w-full bg-gradient-to-r from-[#fd812a] to-orange-600 hover:from-[#fd812a]/90 hover:to-orange-700 text-white font-bold transition-all" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 ring-4 ring-green-300 shadow-lg hover:shadow-xl hover:border-green-500 transition-all">
+              <Card className="bg-gradient-to-br from-white to-yellow-100 border-4 border-[#ffda00] p-8 ring-4 ring-[#ffda00]/30 shadow-lg hover:shadow-xl hover:border-[#ffda00]/80 transition-all">
                 <div className="text-center mb-4">
-                  <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  <span className="bg-gradient-to-r from-[#ffda00] to-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">
                     MOST POPULAR
                   </span>
                 </div>
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Premium Package</h3>
-                <p className="text-4xl font-bold text-green-600 mb-6">$599</p>
+                <p className="text-4xl font-bold text-[#ffda00] mb-6">$599</p>
                 <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 3 hours unlimited activities (up to 20)</li>
                   <li>• Full food & drink buffet</li>
@@ -149,14 +151,14 @@ export default function GamesPage() {
                   <li>• 1 hour axe throwing session</li>
                   <li>• Dedicated party host</li>
                 </ul>
-                <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold transition-all" asChild>
+                <Button className="w-full bg-gradient-to-r from-[#ffda00] to-yellow-500 hover:from-[#ffda00]/90 hover:to-yellow-600 text-gray-900 font-bold transition-all" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 shadow-lg hover:shadow-xl hover:border-purple-500 transition-all">
+              <Card className="bg-gradient-to-br from-white to-cyan-100 border-4 border-[#02ffff] p-8 shadow-lg hover:shadow-xl hover:border-[#02ffff]/80 transition-all">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Ultimate Package</h3>
-                <p className="text-4xl font-bold text-purple-600 mb-6">$999</p>
+                <p className="text-4xl font-bold text-[#02ffff] mb-6">$999</p>
                 <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 4 hours full venue access (up to 30)</li>
                   <li>• Premium catering & open bar</li>
@@ -166,7 +168,7 @@ export default function GamesPage() {
                   <li>• Party coordinator & staff</li>
                 </ul>
                 <Button
-                  className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold transition-all"
+                  className="w-full bg-gradient-to-r from-[#02ffff] to-cyan-400 hover:from-[#02ffff]/90 hover:to-cyan-500 text-gray-900 font-bold transition-all"
                   asChild
                 >
                   <Link href="/contact">Book This Package</Link>

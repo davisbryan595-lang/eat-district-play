@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -11,129 +10,42 @@ import { Preloader } from "@/components/preloader"
 import { Utensils, Wine, Gamepad2, Calendar, Star, ChevronRight } from "lucide-react"
 
 export default function HomePage() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const featuresRef = useRef<HTMLDivElement>(null)
-  const eventsRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Wait for GSAP to load before initializing animations
-    const loadGSAPAnimations = () => {
-      if (typeof window !== "undefined" && window.gsap && window.ScrollTrigger) {
-        const gsap = window.gsap
-        const ScrollTrigger = window.ScrollTrigger
-
-        gsap.registerPlugin(ScrollTrigger)
-
-        // Hero animations
-        gsap.from(".hero-logo", {
-          scale: 0,
-          opacity: 0,
-          duration: 1,
-          delay: 0.5,
-          ease: "back.out(1.7)",
-        })
-
-        gsap.from(".hero-tagline", {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          delay: 1,
-        })
-
-        gsap.from(".hero-cta", {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          delay: 1.3,
-        })
-
-        // Feature cards stagger
-        gsap.from(".feature-card", {
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 80%",
-          },
-          y: 100,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.2,
-        })
-
-        // Events carousel
-        gsap.from(".event-card", {
-          scrollTrigger: {
-            trigger: eventsRef.current,
-            start: "top 80%",
-          },
-          x: 100,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.15,
-        })
-
-        // Section title animations
-        gsap.utils.toArray(".section-title").forEach((title: any) => {
-          gsap.from(title, {
-            scrollTrigger: {
-              trigger: title,
-              start: "top 85%",
-            },
-            x: -100,
-            opacity: 0,
-            duration: 0.8,
-          })
-        })
-      } else {
-        // GSAP not loaded yet, retry after 100ms
-        requestAnimationFrame(loadGSAPAnimations)
-      }
-    }
-
-    loadGSAPAnimations()
-  }, [])
 
   return (
     <>
       <Preloader />
       <Navigation />
 
-      {/* Hero Section with Video Background */}
-      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-yellow-50 via-orange-100 to-pink-100">
-        {/* Video Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-orange-100/50 to-purple-100/50 z-10" />
-          <iframe
-            className="absolute inset-0 w-full h-full object-cover"
-            src="https://www.youtube.com/embed/yygDVuZDgVw?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&playlist=yygDVuZDgVw"
-            title="District Eat & Play"
-            allow="autoplay; fullscreen"
-          />
-        </div>
+      {/* Hero Section */}
+      <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#ffda00]/10 via-[#fd812a]/10 to-[#02ffff]/10">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-orange-100/40 to-purple-100/30 z-0" />
 
         {/* Hero Content */}
-        <div className="relative z-20 text-center px-4">
-          <div className="hero-logo mb-8">
+        <div className="relative z-20 text-center px-4 animate-fade-in">
+          <div className="hero-logo mb-8 animate-scale-in">
             <Image
               src="/images/logo.png"
               alt="District Eat & Play"
               width={200}
               height={200}
+              priority
               className="mx-auto drop-shadow-2xl"
             />
           </div>
 
-          <h1 className="hero-tagline font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-4 tracking-wider drop-shadow-lg">
+          <h1 className="hero-heading font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-4 tracking-wider drop-shadow-lg animate-slide-down">
             DISTRICT
           </h1>
 
-          <p className="hero-tagline text-2xl md:text-4xl font-bold mb-12 tracking-wide">
+          <p className="hero-tagline text-2xl md:text-4xl font-bold mb-12 tracking-wide animate-slide-down-delayed">
             <span className="text-[#02ffff]">Eat.</span> <span className="text-[#ffda00]">Play.</span> <span className="text-[#fd812a]">Repeat.</span>
           </p>
 
-          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delayed">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all animate-orange-glow"
+              className="bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="/contact">Book Your Experience</Link>
@@ -141,7 +53,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white text-lg px-8 py-6 bg-white font-bold transition-all"
+              className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 text-lg px-8 py-6 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/menu">View Menu</Link>
@@ -158,17 +70,17 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
-            Experience The <span className="text-[hsl(var(--district-orange))]">Ultimate</span> Entertainment
+          <h2 className="section-heading font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16 animate-fade-in-scroll">
+            Experience The <span className="text-[#fd812a]">Ultimate</span> Entertainment
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Food Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center mb-6 group-hover:from-orange-300 group-hover:to-orange-400 transition-all">
-                <Utensils className="w-10 h-10 text-orange-600 font-bold" />
+            <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500 animate-fade-in-scroll">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#fd812a]/20 to-[#fd812a]/30 flex items-center justify-center mb-6 group-hover:from-[#fd812a]/30 group-hover:to-[#fd812a]/40 transition-all">
+                <Utensils className="w-10 h-10 text-[#fd812a] font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">FOOD</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -177,7 +89,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-orange-600 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 font-bold p-0 transition-all"
+                className="text-[#fd812a] hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-orange-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#food">
@@ -187,9 +99,9 @@ export default function HomePage() {
             </Card>
 
             {/* Drinks Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-green-500">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center mb-6 group-hover:from-green-300 group-hover:to-green-400 transition-all">
-                <Wine className="w-10 h-10 text-green-600 font-bold" />
+            <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-[#ffda00] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-[#ffda00]/80 animate-fade-in-scroll">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ffda00]/20 to-[#ffda00]/30 flex items-center justify-center mb-6 group-hover:from-[#ffda00]/30 group-hover:to-[#ffda00]/40 transition-all">
+                <Wine className="w-10 h-10 text-[#ffda00] font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">DRINKS</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -198,7 +110,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-green-600 hover:text-white hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 font-bold p-0 transition-all"
+                className="text-[#ffda00] hover:text-white hover:bg-gradient-to-r hover:from-[#ffda00] hover:to-yellow-500 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#drinks">
@@ -208,9 +120,9 @@ export default function HomePage() {
             </Card>
 
             {/* Games Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-purple-500">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center mb-6 group-hover:from-purple-300 group-hover:to-purple-400 transition-all">
-                <Gamepad2 className="w-10 h-10 text-purple-600 font-bold" />
+            <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-[#02ffff] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-[#02ffff]/80 animate-fade-in-scroll">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#02ffff]/20 to-[#02ffff]/30 flex items-center justify-center mb-6 group-hover:from-[#02ffff]/30 group-hover:to-[#02ffff]/40 transition-all">
+                <Gamepad2 className="w-10 h-10 text-[#02ffff] font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">GAMES</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -219,7 +131,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-purple-600 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-600 font-bold p-0 transition-all"
+                className="text-[#02ffff] hover:text-white hover:bg-gradient-to-r hover:from-[#02ffff] hover:to-cyan-400 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/games">
@@ -232,25 +144,25 @@ export default function HomePage() {
       </section>
 
       {/* Events Carousel */}
-      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4">
-            <span className="text-[hsl(var(--district-orange))]">Featured</span> Events
+          <h2 className="section-heading font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4 animate-fade-in-scroll">
+            <span className="text-[#fd812a]">Featured</span> Events
           </h2>
           <p className="text-center text-gray-700 text-lg mb-12">Never a dull moment at District</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="event-card bg-white border-4 border-orange-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-orange-500 transition-all">
-              <div className="relative h-48 overflow-hidden">
-                <img
+            <Card className="event-card bg-white border-4 border-[#fd812a] overflow-hidden group shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all animate-fade-in-scroll">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                <Image
                   src="/bowling-lanes-neon-lights.jpg"
                   alt="Cosmic Bowling"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-[#fd812a] to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     FRIDAYS
                   </span>
                 </div>
@@ -259,23 +171,23 @@ export default function HomePage() {
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Cosmic Bowling Night</h3>
                 <p className="text-gray-700 mb-4">Glow-in-the-dark bowling with DJ and drink specials</p>
                 <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
-                  <Calendar className="w-4 h-4 text-orange-500" />
+                  <Calendar className="w-4 h-4 text-[#fd812a]" />
                   <span>Every Friday, 9PM - 1AM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-white border-4 border-green-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-green-500 transition-all">
-              <div className="relative h-48 overflow-hidden">
-                <img
+            <Card className="event-card bg-white border-4 border-[#ffda00] overflow-hidden group shadow-lg hover:shadow-xl hover:border-[#ffda00]/80 transition-all animate-fade-in-scroll">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                <Image
                   src="/arcade-games-retro-neon.jpg"
                   alt="Retro Game Night"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-[#ffda00] to-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                     THURSDAYS
                   </span>
                 </div>
@@ -284,23 +196,23 @@ export default function HomePage() {
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Retro Game Night</h3>
                 <p className="text-gray-700 mb-4">Classic arcade tournaments with prizes</p>
                 <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
-                  <Calendar className="w-4 h-4 text-green-500" />
+                  <Calendar className="w-4 h-4 text-[#ffda00]" />
                   <span>Every Thursday, 7PM - 11PM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-white border-4 border-purple-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-purple-500 transition-all">
-              <div className="relative h-48 overflow-hidden">
-                <img
+            <Card className="event-card bg-white border-4 border-[#02ffff] overflow-hidden group shadow-lg hover:shadow-xl hover:border-[#02ffff]/80 transition-all animate-fade-in-scroll">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                <Image
                   src="/sports-bar-game-watching-crowd.jpg"
                   alt="Watch Party"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-[#02ffff] to-cyan-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
                     GAME DAYS
                   </span>
                 </div>
@@ -309,7 +221,7 @@ export default function HomePage() {
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Game Day Watch Parties</h3>
                 <p className="text-gray-700 mb-4">Big screens, cold drinks, and game-day specials</p>
                 <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
-                  <Calendar className="w-4 h-4 text-purple-500" />
+                  <Calendar className="w-4 h-4 text-[#02ffff]" />
                   <span>All Major Sporting Events</span>
                 </div>
               </div>
@@ -319,7 +231,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white px-8 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="/events">View All Events</Link>
@@ -331,8 +243,8 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="py-20 bg-gradient-to-b from-pink-50 via-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
-            What Our <span className="text-[hsl(var(--district-orange))]">Guests</span> Say
+          <h2 className="section-heading font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16 animate-fade-in-scroll">
+            What Our <span className="text-[#fd812a]">Guests</span> Say
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -355,13 +267,13 @@ export default function HomePage() {
             ].map((review, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-br from-white to-orange-100 border-4 border-pink-400 p-6 shadow-lg hover:shadow-xl hover:border-pink-500 transition-all"
+                className="bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-6 shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all animate-fade-in-scroll"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-pink-500 text-pink-500"
+                      className="w-5 h-5 fill-[#fd812a] text-[#fd812a]"
                     />
                   ))}
                 </div>
@@ -374,7 +286,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
+      <section className="py-20 bg-gradient-to-r from-[#fd812a] via-pink-500 to-[#02ffff]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-mono text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Ready to Experience District?</h2>
           <p className="text-xl text-white/98 mb-8 max-w-2xl mx-auto font-semibold drop-shadow-md">
