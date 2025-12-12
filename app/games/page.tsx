@@ -120,44 +120,44 @@ export default function GamesPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/30 p-8 shadow-lg">
+              <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 shadow-lg hover:shadow-xl hover:border-orange-500 transition-all">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Basic Package</h3>
-                <p className="text-4xl font-bold text-[hsl(var(--district-orange))] mb-6">$299</p>
-                <ul className="space-y-3 text-gray-700 mb-8">
+                <p className="text-4xl font-bold text-orange-600 mb-6">$299</p>
+                <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 2 hours of bowling (up to 10 people)</li>
                   <li>• Pizza & soft drinks</li>
                   <li>• $20 arcade card</li>
                   <li>• Private party area</li>
                 </ul>
-                <Button className="w-full bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white" asChild>
+                <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold transition-all" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/30 p-8 ring-2 ring-[hsl(var(--district-green))]/50 shadow-lg">
+              <Card className="bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 ring-4 ring-green-300 shadow-lg hover:shadow-xl hover:border-green-500 transition-all">
                 <div className="text-center mb-4">
-                  <span className="bg-[hsl(var(--district-green))] text-white px-4 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                     MOST POPULAR
                   </span>
                 </div>
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Premium Package</h3>
-                <p className="text-4xl font-bold text-[hsl(var(--district-green))] mb-6">$599</p>
-                <ul className="space-y-3 text-gray-700 mb-8">
+                <p className="text-4xl font-bold text-green-600 mb-6">$599</p>
+                <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 3 hours unlimited activities (up to 20)</li>
                   <li>• Full food & drink buffet</li>
                   <li>• $50 arcade card per person</li>
                   <li>• 1 hour axe throwing session</li>
                   <li>• Dedicated party host</li>
                 </ul>
-                <Button className="w-full bg-[hsl(var(--district-green))] hover:bg-[hsl(var(--district-green))]/90 text-white" asChild>
+                <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold transition-all" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-purple-50 border-[hsl(var(--district-purple))]/30 p-8 shadow-lg">
+              <Card className="bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 shadow-lg hover:shadow-xl hover:border-purple-500 transition-all">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Ultimate Package</h3>
-                <p className="text-4xl font-bold text-[hsl(var(--district-purple))] mb-6">$999</p>
-                <ul className="space-y-3 text-gray-700 mb-8">
+                <p className="text-4xl font-bold text-purple-600 mb-6">$999</p>
+                <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 4 hours full venue access (up to 30)</li>
                   <li>• Premium catering & open bar</li>
                   <li>• Unlimited arcade & activities</li>
@@ -166,7 +166,7 @@ export default function GamesPage() {
                   <li>• Party coordinator & staff</li>
                 </ul>
                 <Button
-                  className="w-full bg-[hsl(var(--district-purple))] hover:bg-[hsl(var(--district-purple))]/90 text-white"
+                  className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold transition-all"
                   asChild
                 >
                   <Link href="/contact">Book This Package</Link>
