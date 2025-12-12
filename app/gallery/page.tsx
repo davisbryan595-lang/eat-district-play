@@ -78,7 +78,7 @@ export default function GalleryPage() {
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-white hover:text-[hsl(var(--district-red))] transition-colors"
+              className="absolute top-4 right-4 text-white hover:text-[#fd812a] transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               <X className="w-8 h-8" />
@@ -92,7 +92,7 @@ export default function GalleryPage() {
         )}
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500">
+        <section className="py-16 bg-gradient-to-r from-[#fd812a] via-pink-500 to-[#02ffff]">
           <div className="container mx-auto px-4 text-center">
             <h3 className="font-mono text-3xl font-bold text-white mb-4 drop-shadow-lg">Ready to Create Your Own Memories?</h3>
             <p className="text-white/98 mb-6 font-semibold drop-shadow-md">Come experience District for yourself</p>
