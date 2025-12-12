@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -11,86 +10,6 @@ import { Preloader } from "@/components/preloader"
 import { Utensils, Wine, Gamepad2, Calendar, Star, ChevronRight } from "lucide-react"
 
 export default function HomePage() {
-  const heroRef = useRef<HTMLDivElement>(null)
-  const featuresRef = useRef<HTMLDivElement>(null)
-  const eventsRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Wait for GSAP to load before initializing animations
-    const loadGSAPAnimations = () => {
-      if (typeof window !== "undefined" && window.gsap && window.ScrollTrigger) {
-        const gsap = window.gsap
-        const ScrollTrigger = window.ScrollTrigger
-
-        gsap.registerPlugin(ScrollTrigger)
-
-        // Hero animations
-        gsap.from(".hero-logo", {
-          scale: 0,
-          opacity: 0,
-          duration: 1,
-          delay: 0.5,
-          ease: "back.out(1.7)",
-        })
-
-        gsap.from(".hero-tagline", {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          delay: 1,
-        })
-
-        gsap.from(".hero-cta", {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          delay: 1.3,
-        })
-
-        // Feature cards stagger
-        gsap.from(".feature-card", {
-          scrollTrigger: {
-            trigger: featuresRef.current,
-            start: "top 80%",
-          },
-          y: 100,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.2,
-        })
-
-        // Events carousel
-        gsap.from(".event-card", {
-          scrollTrigger: {
-            trigger: eventsRef.current,
-            start: "top 80%",
-          },
-          x: 100,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.15,
-        })
-
-        // Section title animations
-        gsap.utils.toArray(".section-title").forEach((title: any) => {
-          gsap.from(title, {
-            scrollTrigger: {
-              trigger: title,
-              start: "top 85%",
-            },
-            x: -100,
-            opacity: 0,
-            duration: 0.8,
-          })
-        })
-      } else {
-        // GSAP not loaded yet, retry after 100ms
-        requestAnimationFrame(loadGSAPAnimations)
-      }
-    }
-
-    loadGSAPAnimations()
-  }, [])
 
   return (
     <>
