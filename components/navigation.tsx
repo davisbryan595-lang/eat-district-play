@@ -119,7 +119,7 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden text-gray-800 p-2" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button className="lg:hidden text-gray-800 p-2 hover:bg-orange-100 rounded-lg transition-colors" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
