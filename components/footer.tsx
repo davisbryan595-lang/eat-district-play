@@ -4,14 +4,14 @@ import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from "luci
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-orange-50 via-purple-50 to-pink-50 text-gray-900 border-t-4 border-orange-400">
+    <footer className="bg-gradient-to-br from-orange-50 via-purple-50 to-pink-50 text-gray-900 border-t-4 border-[#fd812a]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Tagline */}
           <div>
             <Image src="/images/logo.png" alt="District Eat & Play" width={80} height={80} className="mb-4" />
             <h3 className="font-mono text-2xl font-bold mb-2 text-gray-900">DISTRICT</h3>
-            <p className="text-[hsl(var(--district-orange))] font-semibold mb-4">Eat. Drink. Play. Repeat.</p>
+            <p className="text-[#fd812a] font-semibold mb-4">Eat. Drink. Play. Repeat.</p>
             <p className="text-sm text-gray-700">
               The ultimate entertainment destination for unforgettable experiences.
             </p>
