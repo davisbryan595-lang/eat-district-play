@@ -267,7 +267,7 @@ export default function HomePage() {
             ].map((review, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-br from-white to-orange-100 border-4 border-pink-400 p-6 shadow-lg hover:shadow-xl hover:border-pink-500 transition-all"
+                className="bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-6 shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all animate-fade-in-scroll"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
