@@ -48,6 +48,9 @@
   --district-blue: 210 90% 50%;
   --district-red: 0 95% 52%;
   --district-gold: 40 95% 52%;
+  --district-cyan: #02ffff;
+  --district-yellow: #ffda00;
+  --district-vibrant-orange: #fd812a;
 }
 
 .dark {

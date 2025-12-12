@@ -119,8 +119,8 @@ export default function HomePage() {
             DISTRICT
           </h1>
 
-          <p className="hero-tagline text-2xl md:text-4xl text-[hsl(var(--district-orange))] font-bold mb-12 tracking-wide">
-            Eat. Drink. Play. Repeat.
+          <p className="hero-tagline text-2xl md:text-4xl font-bold mb-12 tracking-wide">
+            <span className="text-[#02ffff]">Eat.</span> <span className="text-[#ffda00]">Play.</span> <span className="text-[#fd812a]">Repeat.</span>
           </p>
 
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
