@@ -29,7 +29,7 @@ export default function GalleryPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-green-200 via-pink-200 to-orange-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-[#02ffff]/20">
           <div className="absolute inset-0 opacity-30">
             <img src="/placeholder.svg?height=400&width=1600" alt="Gallery" className="w-full h-full object-cover" />
           </div>
@@ -44,7 +44,7 @@ export default function GalleryPage() {
           <div className="container mx-auto px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
               {images.map((image, index) => {
-                const colors = ["border-orange-400", "border-green-400", "border-purple-400", "border-pink-400", "border-blue-400", "border-yellow-400"];
+                const colors = ["border-[#fd812a]", "border-[#ffda00]", "border-[#02ffff]", "border-pink-400", "border-blue-400", "border-purple-400"];
                 const color = colors[index % colors.length];
                 return (
                   <div
