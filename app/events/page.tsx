@@ -134,20 +134,20 @@ export default function EventsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-[hsl(var(--district-red))]">
+        <section className="py-20 bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-mono text-4xl md:text-5xl font-bold text-white mb-6">Ready to Book Your Event?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <h2 className="font-mono text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">Ready to Book Your Event?</h2>
+            <p className="text-xl text-white/98 mb-8 max-w-2xl mx-auto font-semibold drop-shadow-md">
               Our event coordinators are standing by to help plan your perfect celebration
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-100" asChild>
+              <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-bold shadow-lg hover:shadow-xl transition-all" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent font-bold shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
                 <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
