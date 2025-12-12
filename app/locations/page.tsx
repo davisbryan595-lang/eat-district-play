@@ -56,34 +56,34 @@ export default function LocationsPage() {
                 <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   {/* Info Card */}
                   <Card className={`bg-gradient-to-br from-white p-8 border-4 transition-all hover:shadow-lg ${index === 0 ? "to-orange-100 border-orange-400 hover:border-orange-500" : "to-purple-100 border-purple-400 hover:border-purple-500"}`}>
-                    <h2 className="font-mono text-4xl font-bold text-white mb-6">
-                      <span className="text-[hsl(var(--district-red))]">{location.city}</span>
+                    <h2 className="font-mono text-4xl font-bold text-gray-900 mb-6">
+                      <span className={index === 0 ? "text-orange-600" : "text-purple-600"}>{location.city}</span>
                     </h2>
 
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                        <MapPin className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
                         <div>
-                          <h3 className="font-semibold text-white mb-1">Address</h3>
-                          <p className="text-gray-400">{location.address}</p>
+                          <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
+                          <p className="text-gray-700 font-semibold">{location.address}</p>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <Phone className="w-6 h-6 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                        <Phone className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
                         <div>
-                          <h3 className="font-semibold text-white mb-1">Phone</h3>
-                          <a href={`tel:${location.phone}`} className="text-[hsl(var(--district-red))] hover:underline">
+                          <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
+                          <a href={`tel:${location.phone}`} className={`font-bold hover:underline ${index === 0 ? "text-orange-600" : "text-purple-600"}`}>
                             {location.phone}
                           </a>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <Clock className="w-6 h-6 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                        <Clock className={`w-6 h-6 flex-shrink-0 mt-1 ${index === 0 ? "text-orange-500" : "text-purple-500"}`} />
                         <div>
-                          <h3 className="font-semibold text-white mb-2">Hours</h3>
-                          <div className="space-y-1 text-gray-400">
+                          <h3 className="font-semibold text-gray-900 mb-2">Hours</h3>
+                          <div className="space-y-1 text-gray-700 font-semibold">
                             <p>{location.hours.weekday}</p>
                             <p>{location.hours.weekend}</p>
                             <p>{location.hours.sunday}</p>
