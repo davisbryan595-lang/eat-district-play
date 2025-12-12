@@ -151,14 +151,14 @@ export default function GamesPage() {
                   <li>• 1 hour axe throwing session</li>
                   <li>• Dedicated party host</li>
                 </ul>
-                <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold transition-all" asChild>
+                <Button className="w-full bg-gradient-to-r from-[#ffda00] to-yellow-500 hover:from-[#ffda00]/90 hover:to-yellow-600 text-gray-900 font-bold transition-all" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 shadow-lg hover:shadow-xl hover:border-purple-500 transition-all">
+              <Card className="bg-gradient-to-br from-white to-cyan-100 border-4 border-[#02ffff] p-8 shadow-lg hover:shadow-xl hover:border-[#02ffff]/80 transition-all">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Ultimate Package</h3>
-                <p className="text-4xl font-bold text-purple-600 mb-6">$999</p>
+                <p className="text-4xl font-bold text-[#02ffff] mb-6">$999</p>
                 <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 4 hours full venue access (up to 30)</li>
                   <li>• Premium catering & open bar</li>
@@ -168,7 +168,7 @@ export default function GamesPage() {
                   <li>• Party coordinator & staff</li>
                 </ul>
                 <Button
-                  className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold transition-all"
+                  className="w-full bg-gradient-to-r from-[#02ffff] to-cyan-400 hover:from-[#02ffff]/90 hover:to-cyan-500 text-gray-900 font-bold transition-all"
                   asChild
                 >
                   <Link href="/contact">Book This Package</Link>
