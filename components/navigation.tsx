@@ -82,7 +82,7 @@ export function Navigation() {
 
                 {/* Mega Dropdown */}
                 {item.submenu && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 bg-white border-2 border-orange-400 rounded-lg shadow-xl min-w-[200px] py-2">
+                  <div className="absolute top-full left-0 mt-2 bg-white border-2 border-[#fd812a] rounded-lg shadow-xl min-w-[200px] py-2">
                     {item.submenu.map((subItem, index) => (
                       <Link
                         key={subItem.name}
