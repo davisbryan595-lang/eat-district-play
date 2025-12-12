@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
@@ -40,7 +41,13 @@ export default function LocationsPage() {
         {/* Hero */}
         <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-[#02ffff]/20">
           <div className="absolute inset-0 opacity-30">
-            <img src="/modern-entertainment-venue-exterior.jpg" alt="Locations" className="w-full h-full object-cover" />
+            <Image
+              src="/modern-entertainment-venue-exterior.jpg"
+              alt="Locations"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
           <div className="relative z-10 text-center">
             <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">OUR LOCATIONS</h1>
