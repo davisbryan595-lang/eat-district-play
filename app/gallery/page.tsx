@@ -29,18 +29,18 @@ export default function GalleryPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-black">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-green-200 via-pink-200 to-orange-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/placeholder.svg?height=400&width=1600" alt="Gallery" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-white mb-4">GALLERY</h1>
-            <p className="text-xl text-gray-300">See What Makes District Special</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">GALLERY</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">See What Makes District Special</p>
           </div>
         </section>
 
         {/* Masonry Gallery */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-gradient-to-b from-white to-pink-50">
           <div className="container mx-auto px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
               {images.map((image, index) => (
