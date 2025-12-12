@@ -111,7 +111,7 @@ export default function ContactPage() {
                       <select
                         value={formData.eventType}
                         onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                        className="w-full bg-white border-2 border-orange-300 text-gray-900 rounded-lg px-3 py-2 font-semibold focus:border-orange-500"
+                        className="w-full bg-white border-2 border-[#fd812a]/30 text-gray-900 rounded-lg px-3 py-2 font-semibold focus:border-[#fd812a]"
                       >
                         <option value="general">General Inquiry</option>
                         <option value="birthday">Birthday Party</option>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                         type="number"
                         value={formData.guests}
                         onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
+                        className="bg-white border-2 border-[#fd812a]/30 text-gray-900 font-semibold focus:border-[#fd812a]"
                         placeholder="10"
                       />
                     </div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                       type="date"
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
+                      className="bg-white border-2 border-[#fd812a]/30 text-gray-900 font-semibold focus:border-[#fd812a]"
                     />
                   </div>
 
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     <Textarea
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="bg-white border-2 border-orange-300 text-gray-900 font-semibold min-h-[120px] focus:border-orange-500"
+                      className="bg-white border-2 border-[#fd812a]/30 text-gray-900 font-semibold min-h-[120px] focus:border-[#fd812a]"
                       placeholder="Tell us about your event or inquiry..."
                     />
                   </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-bold shadow-lg hover:shadow-xl transition-all"
+                    className="w-full bg-gradient-to-r from-[#fd812a] to-[#ffda00] hover:from-[#fd812a]/90 hover:to-[#ffda00]/90 text-white font-bold shadow-lg hover:shadow-xl transition-all"
                   >
                     Send Message
                   </Button>
