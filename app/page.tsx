@@ -273,7 +273,7 @@ export default function HomePage() {
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-pink-500 text-pink-500"
+                      className="w-5 h-5 fill-[#fd812a] text-[#fd812a]"
                     />
                   ))}
                 </div>
