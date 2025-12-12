@@ -364,20 +364,20 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[hsl(var(--district-orange))] via-[hsl(var(--district-pink))] to-[hsl(var(--district-purple))]">
+      <section className="py-20 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-mono text-4xl md:text-6xl font-bold text-white mb-6">Ready to Experience District?</h2>
-          <p className="text-xl text-white/95 mb-8 max-w-2xl mx-auto">
+          <h2 className="font-mono text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Ready to Experience District?</h2>
+          <p className="text-xl text-white/98 mb-8 max-w-2xl mx-auto font-semibold drop-shadow-md">
             Book your lane, reserve a party room, or just drop by. We're ready to make your night unforgettable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 font-semibold" asChild>
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all" asChild>
               <Link href="/contact">Book Now</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6 bg-transparent font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6 bg-transparent font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
