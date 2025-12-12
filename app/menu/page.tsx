@@ -88,13 +88,13 @@ export default function MenuPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-orange-50 to-pink-50">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-yellow-200 via-orange-200 to-pink-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/restaurant-food-drinks-on-table.jpg" alt="Menu" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4">OUR MENU</h1>
-            <p className="text-xl text-gray-700">Fuel Your Fun with Bold Flavors</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4 drop-shadow-lg">OUR MENU</h1>
+            <p className="text-xl text-gray-800 font-semibold drop-shadow-md">Fuel Your Fun with Bold Flavors</p>
           </div>
         </section>
 
