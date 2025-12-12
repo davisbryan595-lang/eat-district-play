@@ -16,43 +16,36 @@ export default function HomePage() {
       <Preloader />
       <Navigation />
 
-      {/* Hero Section with Video Background */}
-      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-yellow-50 via-orange-100 to-pink-100">
-        {/* Video Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-orange-100/50 to-purple-100/50 z-10" />
-          <iframe
-            className="absolute inset-0 w-full h-full object-cover"
-            src="https://www.youtube.com/embed/yygDVuZDgVw?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&playlist=yygDVuZDgVw"
-            title="District Eat & Play"
-            allow="autoplay; fullscreen"
-          />
-        </div>
+      {/* Hero Section */}
+      <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#ffda00]/10 via-[#fd812a]/10 to-[#02ffff]/10">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-orange-100/40 to-purple-100/30 z-0" />
 
         {/* Hero Content */}
-        <div className="relative z-20 text-center px-4">
-          <div className="hero-logo mb-8">
+        <div className="relative z-20 text-center px-4 animate-fade-in">
+          <div className="hero-logo mb-8 animate-scale-in">
             <Image
               src="/images/logo.png"
               alt="District Eat & Play"
               width={200}
               height={200}
+              priority
               className="mx-auto drop-shadow-2xl"
             />
           </div>
 
-          <h1 className="hero-tagline font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-4 tracking-wider drop-shadow-lg">
+          <h1 className="hero-heading font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-4 tracking-wider drop-shadow-lg animate-slide-down">
             DISTRICT
           </h1>
 
-          <p className="hero-tagline text-2xl md:text-4xl font-bold mb-12 tracking-wide">
+          <p className="hero-tagline text-2xl md:text-4xl font-bold mb-12 tracking-wide animate-slide-down-delayed">
             <span className="text-[#02ffff]">Eat.</span> <span className="text-[#ffda00]">Play.</span> <span className="text-[#fd812a]">Repeat.</span>
           </p>
 
-          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delayed">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all animate-orange-glow"
+              className="bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="/contact">Book Your Experience</Link>
@@ -60,7 +53,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white text-lg px-8 py-6 bg-white font-bold transition-all"
+              className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 text-lg px-8 py-6 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/menu">View Menu</Link>
