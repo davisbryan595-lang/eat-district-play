@@ -26,6 +26,7 @@ export default function HomePage() {
             muted
             loop
             playsInline
+            preload="auto"
             title="District Eat & Play Hero Video"
           >
             <source src="/Welcome to District OP! - District Eat and Play OP (1080p, h264).mp4" type="video/mp4" />
@@ -34,7 +35,7 @@ export default function HomePage() {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-black/40 z-10" />
 
         {/* Hero Content */}
         <div className="relative z-20 text-center px-4 animate-fade-in">
