@@ -59,7 +59,7 @@ export function Navigation() {
             <Image src="/images/logo.png" alt="District Eat & Play" width={60} height={60} className="w-14 h-14" />
             <div className="hidden md:block">
               <div className="font-mono text-xl font-bold text-gray-900 tracking-wider">DISTRICT</div>
-              <div className="text-xs text-[hsl(var(--district-orange))] tracking-widest">EAT & PLAY</div>
+              <div className="text-xs text-[#fd812a] tracking-widest">EAT & PLAY</div>
             </div>
           </Link>
 
