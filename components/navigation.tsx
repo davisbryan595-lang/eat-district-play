@@ -102,13 +102,13 @@ export function Navigation() {
           <div className="hidden lg:flex items-center gap-3">
             <Button
               variant="outline"
-              className="border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white bg-white font-bold transition-all"
+              className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/contact">Book Now</Link>
             </Button>
             <Button
-              className="bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600 font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-gradient-to-r from-[#fd812a] to-pink-500 text-white hover:from-[#fd812a]/90 hover:to-pink-600 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
@@ -116,14 +116,14 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden text-gray-800 p-2 hover:bg-orange-100 rounded-lg transition-colors" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button className="lg:hidden text-gray-800 p-2 hover:bg-[#fd812a]/10 rounded-lg transition-colors" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t-2 border-orange-300 bg-gradient-to-b from-white to-orange-50">
+          <div className="lg:hidden py-4 border-t-2 border-[#fd812a] bg-gradient-to-b from-white to-orange-50">
             {menuItems.map((item) => (
               <div key={item.name} className="py-2">
                 <Link
