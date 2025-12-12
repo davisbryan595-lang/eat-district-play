@@ -38,7 +38,7 @@ export default function LocationsPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-[#02ffff]/20">
           <div className="absolute inset-0 opacity-30">
             <img src="/modern-entertainment-venue-exterior.jpg" alt="Locations" className="w-full h-full object-cover" />
           </div>
