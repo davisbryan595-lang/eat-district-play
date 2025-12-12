@@ -88,7 +88,7 @@ export default function MenuPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-yellow-200 via-orange-200 to-pink-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-pink-200">
           <div className="absolute inset-0 opacity-30">
             <img src="/restaurant-food-drinks-on-table.jpg" alt="Menu" className="w-full h-full object-cover" />
           </div>
@@ -102,21 +102,21 @@ export default function MenuPage() {
         <section id="food" className="py-20 bg-gradient-to-b from-white via-orange-50 to-yellow-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              <span className="text-[hsl(var(--district-orange))]">Food</span> Menu
+              <span className="text-[#fd812a]">Food</span> Menu
             </h2>
 
             <Tabs defaultValue="appetizers" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-orange-200 mb-8 border-2 border-orange-400">
-                <TabsTrigger value="appetizers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-orange-200 mb-8 border-2 border-[#fd812a]">
+                <TabsTrigger value="appetizers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#fd812a] data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Appetizers
                 </TabsTrigger>
-                <TabsTrigger value="burgers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
+                <TabsTrigger value="burgers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#fd812a] data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Burgers
                 </TabsTrigger>
-                <TabsTrigger value="pizza" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
+                <TabsTrigger value="pizza" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#fd812a] data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Pizza
                 </TabsTrigger>
-                <TabsTrigger value="entrees" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
+                <TabsTrigger value="entrees" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#fd812a] data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Entrées
                 </TabsTrigger>
               </TabsList>
@@ -127,11 +127,11 @@ export default function MenuPage() {
                     {items.map((item, index) => (
                       <Card
                         key={index}
-                        className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-6 hover:border-orange-500 transition-all shadow-md hover:shadow-lg"
+                        className="bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-6 hover:border-[#fd812a]/80 transition-all shadow-md hover:shadow-lg"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-mono text-xl font-bold text-gray-900">{item.name}</h3>
-                          <span className="text-orange-600 font-bold text-lg">{item.price}</span>
+                          <span className="text-[#fd812a] font-bold text-lg">{item.price}</span>
                         </div>
                         <p className="text-gray-700 font-semibold">{item.description}</p>
                       </Card>
@@ -147,18 +147,18 @@ export default function MenuPage() {
         <section id="drinks" className="py-20 bg-gradient-to-b from-green-50 to-purple-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              <span className="text-[hsl(var(--district-green))]">Drinks</span> Menu
+              <span className="text-[#ffda00]">Drinks</span> Menu
             </h2>
 
             <Tabs defaultValue="cocktails" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 bg-green-200 mb-8 border-2 border-green-400">
-                <TabsTrigger value="cocktails" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
+              <TabsList className="grid w-full grid-cols-3 bg-yellow-200 mb-8 border-2 border-[#ffda00]">
+                <TabsTrigger value="cocktails" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#ffda00] data-[state=active]:to-yellow-500 data-[state=active]:text-gray-900 font-bold">
                   Cocktails
                 </TabsTrigger>
-                <TabsTrigger value="beer" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
+                <TabsTrigger value="beer" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#ffda00] data-[state=active]:to-yellow-500 data-[state=active]:text-gray-900 font-bold">
                   Beer
                 </TabsTrigger>
-                <TabsTrigger value="specials" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
+                <TabsTrigger value="specials" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#ffda00] data-[state=active]:to-yellow-500 data-[state=active]:text-gray-900 font-bold">
                   Specials
                 </TabsTrigger>
               </TabsList>
@@ -169,11 +169,11 @@ export default function MenuPage() {
                     {items.map((item, index) => (
                       <Card
                         key={index}
-                        className="bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-6 hover:border-green-500 transition-all shadow-md hover:shadow-lg"
+                        className="bg-gradient-to-br from-white to-yellow-100 border-4 border-[#ffda00] p-6 hover:border-[#ffda00]/80 transition-all shadow-md hover:shadow-lg"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-mono text-xl font-bold text-gray-900">{item.name}</h3>
-                          <span className="text-green-600 font-bold text-lg">{item.price}</span>
+                          <span className="text-[#ffda00] font-bold text-lg">{item.price}</span>
                         </div>
                         <p className="text-gray-700 font-semibold">{item.description}</p>
                       </Card>
@@ -186,7 +186,7 @@ export default function MenuPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
+        <section className="py-16 bg-gradient-to-r from-[#fd812a] via-pink-500 to-[#02ffff]">
           <div className="container mx-auto px-4 text-center">
             <h3 className="font-mono text-3xl font-bold text-white mb-4 drop-shadow-lg">Ready to Order?</h3>
             <p className="text-white/98 mb-6 font-semibold drop-shadow-md">Visit us or call ahead for takeout</p>
