@@ -100,8 +100,8 @@ export default function HomePage() {
 
             {/* Drinks Card */}
             <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-[#ffda00] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-[#ffda00]/80 animate-fade-in-scroll">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center mb-6 group-hover:from-green-300 group-hover:to-green-400 transition-all">
-                <Wine className="w-10 h-10 text-green-600 font-bold" />
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ffda00]/20 to-[#ffda00]/30 flex items-center justify-center mb-6 group-hover:from-[#ffda00]/30 group-hover:to-[#ffda00]/40 transition-all">
+                <Wine className="w-10 h-10 text-[#ffda00] font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">DRINKS</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -110,7 +110,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-green-600 hover:text-white hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 font-bold p-0 transition-all"
+                className="text-[#ffda00] hover:text-white hover:bg-gradient-to-r hover:from-[#ffda00] hover:to-yellow-500 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#drinks">
@@ -120,7 +120,7 @@ export default function HomePage() {
             </Card>
 
             {/* Games Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-purple-500">
+            <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-[#02ffff] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-[#02ffff]/80 animate-fade-in-scroll">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center mb-6 group-hover:from-purple-300 group-hover:to-purple-400 transition-all">
                 <Gamepad2 className="w-10 h-10 text-purple-600 font-bold" />
               </div>
