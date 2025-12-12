@@ -146,13 +146,13 @@ export default function HomePage() {
       {/* Events Carousel */}
       <section className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4">
-            <span className="text-[hsl(var(--district-orange))]">Featured</span> Events
+          <h2 className="section-heading font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4 animate-fade-in-scroll">
+            <span className="text-[#fd812a]">Featured</span> Events
           </h2>
           <p className="text-center text-gray-700 text-lg mb-12">Never a dull moment at District</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="event-card bg-white border-4 border-orange-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-orange-500 transition-all">
+            <Card className="event-card bg-white border-4 border-[#fd812a] overflow-hidden group shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all animate-fade-in-scroll">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/bowling-lanes-neon-lights.jpg"
