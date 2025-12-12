@@ -225,7 +225,7 @@ export default function HomePage() {
       </section>
 
       {/* Events Carousel */}
-      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-blue-50 to-pink-50">
+      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4">
             <span className="text-[hsl(var(--district-orange))]">Featured</span> Events
