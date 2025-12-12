@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="absolute inset-0 w-full h-full z-0">
           <iframe
             className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/yygDVuZDgVw?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=yygDVuZDgVw"
+            src="https://www.youtube.com/embed/yygDVuZDgVw?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&playlist=yygDVuZDgVw"
             title="District Eat & Play Hero Video"
             allow="autoplay"
             allowFullScreen={false}
