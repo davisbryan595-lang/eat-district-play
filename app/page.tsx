@@ -70,15 +70,15 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
-            Experience The <span className="text-[hsl(var(--district-orange))]">Ultimate</span> Entertainment
+          <h2 className="section-heading font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16 animate-fade-in-scroll">
+            Experience The <span className="text-[#fd812a]">Ultimate</span> Entertainment
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Food Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500">
+            <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500 animate-fade-in-scroll">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center mb-6 group-hover:from-orange-300 group-hover:to-orange-400 transition-all">
                 <Utensils className="w-10 h-10 text-orange-600 font-bold" />
               </div>
