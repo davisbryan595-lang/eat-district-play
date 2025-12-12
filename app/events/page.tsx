@@ -23,43 +23,43 @@ export default function EventsPage() {
         </section>
 
         {/* Event Types */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-gradient-to-b from-white via-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
-            <h2 className="font-mono text-4xl md:text-5xl font-bold text-white text-center mb-12">
-              Perfect For <span className="text-[hsl(var(--district-red))]">Every</span> Occasion
+            <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
+              Perfect For <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Every</span> Occasion
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-red))]/30 p-8 text-center hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-full bg-[hsl(var(--district-red))]/20 flex items-center justify-center mx-auto mb-4">
-                  <PartyPopper className="w-8 h-8 text-[hsl(var(--district-red))]" />
+              <Card className="bg-gradient-to-br from-white to-pink-100 border-4 border-pink-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-pink-500">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center mx-auto mb-4">
+                  <PartyPopper className="w-8 h-8 text-pink-600" />
                 </div>
-                <h3 className="font-mono text-xl font-bold text-white mb-2">Birthday Parties</h3>
-                <p className="text-gray-400">Kids & adults love our birthday packages</p>
+                <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Birthday Parties</h3>
+                <p className="text-gray-700 font-semibold">Kids & adults love our birthday packages</p>
               </Card>
 
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-blue))]/30 p-8 text-center hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-full bg-[hsl(var(--district-blue))]/20 flex items-center justify-center mx-auto mb-4">
-                  <Briefcase className="w-8 h-8 text-[hsl(var(--district-blue))]" />
+              <Card className="bg-gradient-to-br from-white to-blue-100 border-4 border-blue-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-blue-500">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="font-mono text-xl font-bold text-white mb-2">Corporate Events</h3>
-                <p className="text-gray-400">Team building & company celebrations</p>
+                <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Corporate Events</h3>
+                <p className="text-gray-700 font-semibold">Team building & company celebrations</p>
               </Card>
 
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-gold))]/30 p-8 text-center hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-full bg-[hsl(var(--district-gold))]/20 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-[hsl(var(--district-gold))]" />
+              <Card className="bg-gradient-to-br from-white to-yellow-100 border-4 border-yellow-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-yellow-500">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-300 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-yellow-600" />
                 </div>
-                <h3 className="font-mono text-xl font-bold text-white mb-2">Group Outings</h3>
-                <p className="text-gray-400">Friends, family, & social groups</p>
+                <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Group Outings</h3>
+                <p className="text-gray-700 font-semibold">Friends, family, & social groups</p>
               </Card>
 
-              <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-red))]/30 p-8 text-center hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-full bg-[hsl(var(--district-red))]/20 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-8 h-8 text-[hsl(var(--district-red))]" />
+              <Card className="bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 text-center hover:scale-105 transition-all hover:shadow-lg hover:border-purple-500">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="font-mono text-xl font-bold text-white mb-2">Special Events</h3>
-                <p className="text-gray-400">Fundraisers, leagues, & tournaments</p>
+                <h3 className="font-mono text-xl font-bold text-gray-900 mb-2">Special Events</h3>
+                <p className="text-gray-700 font-semibold">Fundraisers, leagues, & tournaments</p>
               </Card>
             </div>
           </div>
