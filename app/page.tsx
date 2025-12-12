@@ -34,7 +34,7 @@ export default function HomePage() {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-orange-100/15 to-purple-100/10 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/40 z-10" />
 
         {/* Hero Content */}
         <div className="relative z-20 text-center px-4 animate-fade-in">
