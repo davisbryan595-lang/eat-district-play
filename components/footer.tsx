@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from "luci
 
 export function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-900 border-t border-[hsl(var(--district-orange))]/20">
+    <footer className="bg-gradient-to-br from-orange-50 via-purple-50 to-pink-50 text-gray-900 border-t-4 border-orange-400">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Tagline */}
