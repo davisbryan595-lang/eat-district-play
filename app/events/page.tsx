@@ -122,7 +122,7 @@ export default function EventsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500">
+        <section className="py-20 bg-gradient-to-r from-[#fd812a] via-purple-500 to-[#02ffff]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">Ready to Book Your Event?</h2>
             <p className="text-xl text-white/98 mb-8 max-w-2xl mx-auto font-semibold drop-shadow-md">
