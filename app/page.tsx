@@ -153,12 +153,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="event-card bg-white border-4 border-[#fd812a] overflow-hidden group shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all animate-fade-in-scroll">
-              <div className="relative h-48 overflow-hidden">
-                <img
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                <Image
                   src="/bowling-lanes-neon-lights.jpg"
                   alt="Cosmic Bowling"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
