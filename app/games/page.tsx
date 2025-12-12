@@ -11,28 +11,28 @@ export default function GamesPage() {
       description: "16 state-of-the-art lanes with cosmic bowling on weekends",
       price: "$6 per game",
       image: "/bowling-lanes-modern.jpg",
-      color: "red",
+      color: "orange",
     },
     {
       name: "Arcade",
       description: "100+ classic and modern arcade games",
       price: "Games from $0.50",
       image: "/arcade-games-neon.jpg",
-      color: "blue",
+      color: "green",
     },
     {
       name: "Axe Throwing",
       description: "Professional axe throwing lanes with safety instruction",
       price: "$25 per person/hour",
       image: "/axe-throwing-target.jpg",
-      color: "gold",
+      color: "purple",
     },
     {
       name: "VR Experience",
       description: "Immersive virtual reality gaming stations",
       price: "$15 per 30 minutes",
       image: "/vr-gaming-headset.jpg",
-      color: "red",
+      color: "pink",
     },
     {
       name: "Pool Tables",
@@ -46,7 +46,7 @@ export default function GamesPage() {
       description: "Private karaoke rooms available on weekends",
       price: "$50 per hour",
       image: "/karaoke-microphone-stage.jpg",
-      color: "gold",
+      color: "orange",
     },
   ]
 
