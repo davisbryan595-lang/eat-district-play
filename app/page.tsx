@@ -345,18 +345,18 @@ export default function HomePage() {
             ].map((review, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/20 p-6 shadow-lg"
+                className="bg-gradient-to-br from-white to-orange-100 border-4 border-pink-400 p-6 shadow-lg hover:shadow-xl hover:border-pink-500 transition-all"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-[hsl(var(--district-pink))] text-[hsl(var(--district-pink))]"
+                      className="w-5 h-5 fill-pink-500 text-pink-500"
                     />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">{review.text}</p>
-                <p className="font-semibold text-gray-900">- {review.name}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed font-medium">{review.text}</p>
+                <p className="font-bold text-gray-900">- {review.name}</p>
               </Card>
             ))}
           </div>
