@@ -319,10 +319,10 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-b from-pink-50 to-white">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-white text-center mb-16">
-            What Our <span className="text-[hsl(var(--district-red))]">Guests</span> Say
+          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
+            What Our <span className="text-[hsl(var(--district-orange))]">Guests</span> Say
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -345,18 +345,18 @@ export default function HomePage() {
             ].map((review, index) => (
               <Card
                 key={index}
-                className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-red))]/20 p-6"
+                className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/20 p-6 shadow-lg"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-[hsl(var(--district-gold))] text-[hsl(var(--district-gold))]"
+                      className="w-5 h-5 fill-[hsl(var(--district-pink))] text-[hsl(var(--district-pink))]"
                     />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">{review.text}</p>
-                <p className="font-semibold text-white">- {review.name}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed">{review.text}</p>
+                <p className="font-semibold text-gray-900">- {review.name}</p>
               </Card>
             ))}
           </div>
