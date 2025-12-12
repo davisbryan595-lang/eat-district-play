@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import React from "react"
 
 export const metadata: Metadata = {
   title: "Our Locations - District Eat & Play",
@@ -12,7 +13,6 @@ export default function LocationsLayout({
 }) {
   return (
     <>
-      <link rel="preload" as="image" href="/modern-entertainment-venue-exterior.jpg" />
       {children}
     </>
   )
