@@ -35,7 +35,7 @@ export default function ContactPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-[#ffda00]/20 via-[#fd812a]/20 to-[#02ffff]/20">
           <div className="absolute inset-0 opacity-30">
             <img src="/placeholder.svg?height=400&width=1600" alt="Contact" className="w-full h-full object-cover" />
           </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div>
                 <h2 className="font-mono text-3xl font-bold text-gray-900 mb-6">
-                  <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Send</span> Us a Message
+                  <span className="bg-gradient-to-r from-[#fd812a] to-[#ffda00] bg-clip-text text-transparent">Send</span> Us a Message
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
