@@ -151,14 +151,14 @@ export default function MenuPage() {
             </h2>
 
             <Tabs defaultValue="cocktails" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 bg-gray-200 mb-8">
-                <TabsTrigger value="cocktails" className="data-[state=active]:bg-[hsl(var(--district-green))] data-[state=active]:text-white">
+              <TabsList className="grid w-full grid-cols-3 bg-green-200 mb-8 border-2 border-green-400">
+                <TabsTrigger value="cocktails" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
                   Cocktails
                 </TabsTrigger>
-                <TabsTrigger value="beer" className="data-[state=active]:bg-[hsl(var(--district-green))] data-[state=active]:text-white">
+                <TabsTrigger value="beer" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
                   Beer
                 </TabsTrigger>
-                <TabsTrigger value="specials" className="data-[state=active]:bg-[hsl(var(--district-green))] data-[state=active]:text-white">
+                <TabsTrigger value="specials" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white font-bold">
                   Specials
                 </TabsTrigger>
               </TabsList>
@@ -169,13 +169,13 @@ export default function MenuPage() {
                     {items.map((item, index) => (
                       <Card
                         key={index}
-                        className="bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/20 p-6 hover:border-[hsl(var(--district-green))]/60 transition-colors shadow-md"
+                        className="bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-6 hover:border-green-500 transition-all shadow-md hover:shadow-lg"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-mono text-xl font-bold text-gray-900">{item.name}</h3>
-                          <span className="text-[hsl(var(--district-green))] font-bold text-lg">{item.price}</span>
+                          <span className="text-green-600 font-bold text-lg">{item.price}</span>
                         </div>
-                        <p className="text-gray-700">{item.description}</p>
+                        <p className="text-gray-700 font-semibold">{item.description}</p>
                       </Card>
                     ))}
                   </div>
