@@ -18,20 +18,23 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#ffda00]/10 via-[#fd812a]/10 to-[#02ffff]/10">
-        {/* YouTube Video Background */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/yygDVuZDgVw?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&playlist=yygDVuZDgVw"
+        {/* Local Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
             title="District Eat & Play Hero Video"
-            allow="autoplay"
-            allowFullScreen={false}
-            style={{ border: 'none', pointerEvents: 'none' }}
-          />
+          >
+            <source src="/Welcome to District OP! - District Eat and Play OP (1080p, h264).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-orange-100/15 to-purple-100/10 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/40 z-10" />
 
         {/* Hero Content */}
         <div className="relative z-20 text-center px-4 animate-fade-in">
