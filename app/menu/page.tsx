@@ -106,17 +106,17 @@ export default function MenuPage() {
             </h2>
 
             <Tabs defaultValue="appetizers" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-gray-200 mb-8">
-                <TabsTrigger value="appetizers" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-orange-200 mb-8 border-2 border-orange-400">
+                <TabsTrigger value="appetizers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Appetizers
                 </TabsTrigger>
-                <TabsTrigger value="burgers" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+                <TabsTrigger value="burgers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Burgers
                 </TabsTrigger>
-                <TabsTrigger value="pizza" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+                <TabsTrigger value="pizza" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Pizza
                 </TabsTrigger>
-                <TabsTrigger value="entrees" className="data-[state=active]:bg-[hsl(var(--district-orange))] data-[state=active]:text-white">
+                <TabsTrigger value="entrees" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white font-bold">
                   Entrées
                 </TabsTrigger>
               </TabsList>
@@ -127,13 +127,13 @@ export default function MenuPage() {
                     {items.map((item, index) => (
                       <Card
                         key={index}
-                        className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/20 p-6 hover:border-[hsl(var(--district-orange))]/60 transition-colors shadow-md"
+                        className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-6 hover:border-orange-500 transition-all shadow-md hover:shadow-lg"
                       >
                         <div className="flex justify-between items-start mb-2">
                           <h3 className="font-mono text-xl font-bold text-gray-900">{item.name}</h3>
-                          <span className="text-[hsl(var(--district-orange))] font-bold text-lg">{item.price}</span>
+                          <span className="text-orange-600 font-bold text-lg">{item.price}</span>
                         </div>
-                        <p className="text-gray-700">{item.description}</p>
+                        <p className="text-gray-700 font-semibold">{item.description}</p>
                       </Card>
                     ))}
                   </div>
