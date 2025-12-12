@@ -43,26 +43,30 @@ export default function GalleryPage() {
         <section className="py-20 bg-gradient-to-b from-white to-pink-50">
           <div className="container mx-auto px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="break-inside-avoid cursor-pointer group"
-                  onClick={() => setSelectedImage(index)}
-                >
-                  <div className="relative overflow-hidden rounded-lg border border-[hsl(var(--district-red))]/20 hover:border-[hsl(var(--district-red))]/60 transition-colors">
-                    <img
-                      src={image.url || "/placeholder.svg"}
-                      alt={image.alt}
-                      className="w-full h-auto group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <span className="text-white font-mono font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                        View Full Size
-                      </span>
+              {images.map((image, index) => {
+                const colors = ["border-orange-400", "border-green-400", "border-purple-400", "border-pink-400", "border-blue-400", "border-yellow-400"];
+                const color = colors[index % colors.length];
+                return (
+                  <div
+                    key={index}
+                    className="break-inside-avoid cursor-pointer group"
+                    onClick={() => setSelectedImage(index)}
+                  >
+                    <div className={`relative overflow-hidden rounded-lg border-4 ${color} hover:border-opacity-100 transition-all hover:shadow-lg group-hover:scale-105`}>
+                      <img
+                        src={image.url || "/placeholder.svg"}
+                        alt={image.alt}
+                        className="w-full h-auto group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                        <span className="text-white font-mono font-bold opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-lg">
+                          View Full Size
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
