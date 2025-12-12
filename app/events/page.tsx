@@ -66,40 +66,69 @@ export default function EventsPage() {
         </section>
 
         {/* Weekly Events */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <section className="py-20 bg-gradient-to-b from-purple-50 to-pink-50">
           <div className="container mx-auto px-4">
-            <h2 className="font-mono text-4xl md:text-5xl font-bold text-white text-center mb-12">
-              <span className="text-[hsl(var(--district-red))]">Weekly</span> Events
+            <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
+              <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Weekly</span> Events
             </h2>
 
             <div className="space-y-6 max-w-4xl mx-auto">
               {[
-                { day: "Monday", event: "Industry Night", desc: "50% off for hospitality workers with valid ID" },
-                { day: "Tuesday", event: "Trivia Night", desc: "Test your knowledge, win prizes! 7PM start" },
-                { day: "Wednesday", event: "Wine Down Wednesday", desc: "$6 all wines by the glass" },
-                { day: "Thursday", event: "Retro Game Night", desc: "Classic arcade tournaments with prizes" },
-                { day: "Friday", event: "Cosmic Bowling", desc: "Glow bowling with DJ 9PM-1AM" },
-                { day: "Saturday", event: "Live Music", desc: "Local bands every Saturday night" },
-                { day: "Sunday", event: "Family Fun Day", desc: "Kids bowl free with adult purchase" },
-              ].map((item, index) => (
-                <Card key={index} className="bg-black border-[hsl(var(--district-red))]/20 p-6">
-                  <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="md:w-32">
-                      <span className="font-mono text-2xl font-bold text-[hsl(var(--district-red))]">{item.day}</span>
+                { day: "Monday", event: "Industry Night", desc: "50% off for hospitality workers with valid ID", color: "blue" },
+                { day: "Tuesday", event: "Trivia Night", desc: "Test your knowledge, win prizes! 7PM start", color: "green" },
+                { day: "Wednesday", event: "Wine Down Wednesday", desc: "$6 all wines by the glass", color: "purple" },
+                { day: "Thursday", event: "Retro Game Night", desc: "Classic arcade tournaments with prizes", color: "orange" },
+                { day: "Friday", event: "Cosmic Bowling", desc: "Glow bowling with DJ 9PM-1AM", color: "pink" },
+                { day: "Saturday", event: "Live Music", desc: "Local bands every Saturday night", color: "yellow" },
+                { day: "Sunday", event: "Family Fun Day", desc: "Kids bowl free with adult purchase", color: "red" },
+              ].map((item, index) => {
+                const colorClasses = {
+                  blue: "border-blue-400 hover:border-blue-500",
+                  green: "border-green-400 hover:border-green-500",
+                  purple: "border-purple-400 hover:border-purple-500",
+                  orange: "border-orange-400 hover:border-orange-500",
+                  pink: "border-pink-400 hover:border-pink-500",
+                  yellow: "border-yellow-400 hover:border-yellow-500",
+                  red: "border-red-400 hover:border-red-500"
+                };
+                const dayColors = {
+                  blue: "text-blue-600",
+                  green: "text-green-600",
+                  purple: "text-purple-600",
+                  orange: "text-orange-600",
+                  pink: "text-pink-600",
+                  yellow: "text-yellow-600",
+                  red: "text-red-600"
+                };
+                const buttonColors = {
+                  blue: "border-blue-500 text-blue-600 hover:bg-blue-500",
+                  green: "border-green-500 text-green-600 hover:bg-green-500",
+                  purple: "border-purple-500 text-purple-600 hover:bg-purple-500",
+                  orange: "border-orange-500 text-orange-600 hover:bg-orange-500",
+                  pink: "border-pink-500 text-pink-600 hover:bg-pink-500",
+                  yellow: "border-yellow-500 text-yellow-600 hover:bg-yellow-500",
+                  red: "border-red-500 text-red-600 hover:bg-red-500"
+                };
+                return (
+                  <Card key={index} className={`bg-white border-4 p-6 ${colorClasses[item.color]} transition-all hover:shadow-lg`}>
+                    <div className="flex flex-col md:flex-row md:items-center gap-4">
+                      <div className="md:w-32">
+                        <span className={`font-mono text-2xl font-bold ${dayColors[item.color]}`}>{item.day}</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-mono text-xl font-bold text-gray-900 mb-1">{item.event}</h3>
+                        <p className="text-gray-700 font-semibold">{item.desc}</p>
+                      </div>
+                      <Button
+                        variant="outline"
+                        className={`border-2 ${buttonColors[item.color]} hover:text-white font-bold md:w-auto bg-white transition-all`}
+                      >
+                        Learn More
+                      </Button>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-mono text-xl font-bold text-white mb-1">{item.event}</h3>
-                      <p className="text-gray-400">{item.desc}</p>
-                    </div>
-                    <Button
-                      variant="outline"
-                      className="border-[hsl(var(--district-red))] text-[hsl(var(--district-red))] hover:bg-[hsl(var(--district-red))] hover:text-white md:w-auto bg-transparent"
-                    >
-                      Learn More
-                    </Button>
-                  </div>
-                </Card>
-              ))}
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
