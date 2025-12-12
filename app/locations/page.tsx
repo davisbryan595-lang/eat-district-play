@@ -55,7 +55,7 @@ export default function LocationsPage() {
               {locations.map((location, index) => (
                 <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   {/* Info Card */}
-                  <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-red))]/30 p-8">
+                  <Card className={`bg-gradient-to-br from-white p-8 border-4 transition-all hover:shadow-lg ${index === 0 ? "to-orange-100 border-orange-400 hover:border-orange-500" : "to-purple-100 border-purple-400 hover:border-purple-500"}`}>
                     <h2 className="font-mono text-4xl font-bold text-white mb-6">
                       <span className="text-[hsl(var(--district-red))]">{location.city}</span>
                     </h2>
