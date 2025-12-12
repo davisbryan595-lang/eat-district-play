@@ -121,8 +121,8 @@ export default function HomePage() {
 
             {/* Games Card */}
             <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-[#02ffff] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-[#02ffff]/80 animate-fade-in-scroll">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center mb-6 group-hover:from-purple-300 group-hover:to-purple-400 transition-all">
-                <Gamepad2 className="w-10 h-10 text-purple-600 font-bold" />
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#02ffff]/20 to-[#02ffff]/30 flex items-center justify-center mb-6 group-hover:from-[#02ffff]/30 group-hover:to-[#02ffff]/40 transition-all">
+                <Gamepad2 className="w-10 h-10 text-[#02ffff] font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">GAMES</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -131,7 +131,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-purple-600 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-600 font-bold p-0 transition-all"
+                className="text-[#02ffff] hover:text-white hover:bg-gradient-to-r hover:from-[#02ffff] hover:to-cyan-400 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/games">
@@ -144,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* Events Carousel */}
-      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-b from-green-50 via-pink-50 to-orange-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4">
             <span className="text-[hsl(var(--district-orange))]">Featured</span> Events
