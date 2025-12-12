@@ -212,7 +212,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-[#02ffff] to-cyan-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
                     GAME DAYS
                   </span>
                 </div>
@@ -221,7 +221,7 @@ export default function HomePage() {
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Game Day Watch Parties</h3>
                 <p className="text-gray-700 mb-4">Big screens, cold drinks, and game-day specials</p>
                 <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
-                  <Calendar className="w-4 h-4 text-purple-500" />
+                  <Calendar className="w-4 h-4 text-[#02ffff]" />
                   <span>All Major Sporting Events</span>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white px-8 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="/events">View All Events</Link>
@@ -243,8 +243,8 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="py-20 bg-gradient-to-b from-pink-50 via-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
-            What Our <span className="text-[hsl(var(--district-orange))]">Guests</span> Say
+          <h2 className="section-heading font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16 animate-fade-in-scroll">
+            What Our <span className="text-[#fd812a]">Guests</span> Say
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
