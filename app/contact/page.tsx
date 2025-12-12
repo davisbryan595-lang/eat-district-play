@@ -51,30 +51,30 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div>
-                <h2 className="font-mono text-3xl font-bold text-white mb-6">
-                  <span className="text-[hsl(var(--district-red))]">Send</span> Us a Message
+                <h2 className="font-mono text-3xl font-bold text-gray-900 mb-6">
+                  <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Send</span> Us a Message
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-white font-semibold mb-2">Name *</label>
+                      <label className="block text-gray-900 font-semibold mb-2">Name *</label>
                       <Input
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="bg-gray-900 border-gray-700 text-white"
+                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label className="block text-white font-semibold mb-2">Email *</label>
+                      <label className="block text-gray-900 font-semibold mb-2">Email *</label>
                       <Input
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="bg-gray-900 border-gray-700 text-white"
+                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -82,22 +82,22 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-white font-semibold mb-2">Phone</label>
+                      <label className="block text-gray-900 font-semibold mb-2">Phone</label>
                       <Input
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="bg-gray-900 border-gray-700 text-white"
+                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
                         placeholder="(555) 123-4567"
                       />
                     </div>
                     <div>
-                      <label className="block text-white font-semibold mb-2">Location *</label>
+                      <label className="block text-gray-900 font-semibold mb-2">Location *</label>
                       <select
                         required
                         value={formData.location}
                         onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                        className="w-full bg-gray-900 border border-gray-700 text-white rounded-lg px-3 py-2"
+                        className="w-full bg-white border-2 border-orange-300 text-gray-900 rounded-lg px-3 py-2 font-semibold focus:border-orange-500"
                       >
                         <option value="sanford">Sanford, FL</option>
                         <option value="salina">Salina, KS</option>
@@ -107,11 +107,11 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-white font-semibold mb-2">Event Type</label>
+                      <label className="block text-gray-900 font-semibold mb-2">Event Type</label>
                       <select
                         value={formData.eventType}
                         onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                        className="w-full bg-gray-900 border border-gray-700 text-white rounded-lg px-3 py-2"
+                        className="w-full bg-white border-2 border-orange-300 text-gray-900 rounded-lg px-3 py-2 font-semibold focus:border-orange-500"
                       >
                         <option value="general">General Inquiry</option>
                         <option value="birthday">Birthday Party</option>
@@ -121,33 +121,33 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-white font-semibold mb-2">Number of Guests</label>
+                      <label className="block text-gray-900 font-semibold mb-2">Number of Guests</label>
                       <Input
                         type="number"
                         value={formData.guests}
                         onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        className="bg-gray-900 border-gray-700 text-white"
+                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
                         placeholder="10"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-white font-semibold mb-2">Preferred Date</label>
+                    <label className="block text-gray-900 font-semibold mb-2">Preferred Date</label>
                     <Input
                       type="date"
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="bg-gray-900 border-gray-700 text-white"
+                      className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-white font-semibold mb-2">Message</label>
+                    <label className="block text-gray-900 font-semibold mb-2">Message</label>
                     <Textarea
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="bg-gray-900 border-gray-700 text-white min-h-[120px]"
+                      className="bg-white border-2 border-orange-300 text-gray-900 font-semibold min-h-[120px] focus:border-orange-500"
                       placeholder="Tell us about your event or inquiry..."
                     />
                   </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-[hsl(var(--district-red))] hover:bg-[hsl(var(--district-red))]/90 text-white animate-red-glow"
+                    className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-bold shadow-lg hover:shadow-xl transition-all"
                   >
                     Send Message
                   </Button>
