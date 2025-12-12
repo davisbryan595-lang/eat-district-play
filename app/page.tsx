@@ -151,26 +151,26 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 bg-black">
+      <section ref={featuresRef} className="py-20 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-white text-center mb-16">
-            Experience The <span className="text-[hsl(var(--district-red))]">Ultimate</span> Entertainment
+          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-16">
+            Experience The <span className="text-[hsl(var(--district-orange))]">Ultimate</span> Entertainment
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Food Card */}
-            <Card className="feature-card bg-gradient-to-br from-black to-gray-900 border-[hsl(var(--district-red))]/30 p-8 hover:scale-105 transition-transform duration-300 group">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-red))]/20 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-red))]/40 transition-colors">
-                <Utensils className="w-10 h-10 text-[hsl(var(--district-red))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
+              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-orange))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-orange))]/25 transition-colors">
+                <Utensils className="w-10 h-10 text-[hsl(var(--district-orange))]" />
               </div>
-              <h3 className="font-mono text-3xl font-bold text-white mb-4">FOOD</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">FOOD</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 Savor mouthwatering burgers, gourmet pizzas, loaded nachos, and more. Our chef-crafted menu features
                 bold flavors that fuel your fun.
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-red))] hover:text-white hover:bg-[hsl(var(--district-red))]/20 p-0"
+                className="text-[hsl(var(--district-orange))] hover:text-white hover:bg-[hsl(var(--district-orange))]/20 p-0"
                 asChild
               >
                 <Link href="/menu#food">
@@ -180,18 +180,18 @@ export default function HomePage() {
             </Card>
 
             {/* Drinks Card */}
-            <Card className="feature-card bg-gradient-to-br from-black to-gray-900 border-[hsl(var(--district-blue))]/30 p-8 hover:scale-105 transition-transform duration-300 group">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-blue))]/20 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-blue))]/40 transition-colors">
-                <Wine className="w-10 h-10 text-[hsl(var(--district-blue))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
+              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-green))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-green))]/25 transition-colors">
+                <Wine className="w-10 h-10 text-[hsl(var(--district-green))]" />
               </div>
-              <h3 className="font-mono text-3xl font-bold text-white mb-4">DRINKS</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">DRINKS</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 From craft cocktails to ice-cold beers, our full bar serves up signature drinks that keep the good times
                 flowing all night long.
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-blue))] hover:text-white hover:bg-[hsl(var(--district-blue))]/20 p-0"
+                className="text-[hsl(var(--district-green))] hover:text-white hover:bg-[hsl(var(--district-green))]/20 p-0"
                 asChild
               >
                 <Link href="/menu#drinks">
@@ -201,18 +201,18 @@ export default function HomePage() {
             </Card>
 
             {/* Games Card */}
-            <Card className="feature-card bg-gradient-to-br from-black to-gray-900 border-[hsl(var(--district-gold))]/30 p-8 hover:scale-105 transition-transform duration-300 group">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-gold))]/20 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-gold))]/40 transition-colors">
-                <Gamepad2 className="w-10 h-10 text-[hsl(var(--district-gold))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-purple-50 border-[hsl(var(--district-purple))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
+              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-purple))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-purple))]/25 transition-colors">
+                <Gamepad2 className="w-10 h-10 text-[hsl(var(--district-purple))]" />
               </div>
-              <h3 className="font-mono text-3xl font-bold text-white mb-4">GAMES</h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">GAMES</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 Bowling, arcade games, axe throwing, VR experiences, and more. Endless entertainment for groups of all
                 sizes and skill levels.
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-gold))] hover:text-white hover:bg-[hsl(var(--district-gold))]/20 p-0"
+                className="text-[hsl(var(--district-purple))] hover:text-white hover:bg-[hsl(var(--district-purple))]/20 p-0"
                 asChild
               >
                 <Link href="/games">
