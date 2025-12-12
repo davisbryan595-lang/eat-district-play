@@ -225,80 +225,80 @@ export default function HomePage() {
       </section>
 
       {/* Events Carousel */}
-      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section ref={eventsRef} className="py-20 bg-gradient-to-b from-blue-50 to-pink-50">
         <div className="container mx-auto px-4">
-          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-white text-center mb-4">
-            <span className="text-[hsl(var(--district-red))]">Featured</span> Events
+          <h2 className="section-title font-mono text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4">
+            <span className="text-[hsl(var(--district-orange))]">Featured</span> Events
           </h2>
-          <p className="text-center text-gray-400 text-lg mb-12">Never a dull moment at District</p>
+          <p className="text-center text-gray-700 text-lg mb-12">Never a dull moment at District</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="event-card bg-black border-[hsl(var(--district-red))]/20 overflow-hidden group">
+            <Card className="event-card bg-white border-[hsl(var(--district-orange))]/20 overflow-hidden group shadow-lg">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/bowling-lanes-neon-lights.jpg"
                   alt="Cosmic Bowling"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[hsl(var(--district-red))] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-[hsl(var(--district-orange))] text-white text-xs font-bold px-3 py-1 rounded-full">
                     FRIDAYS
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-mono text-2xl font-bold text-white mb-2">Cosmic Bowling Night</h3>
-                <p className="text-gray-400 mb-4">Glow-in-the-dark bowling with DJ and drink specials</p>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Cosmic Bowling Night</h3>
+                <p className="text-gray-700 mb-4">Glow-in-the-dark bowling with DJ and drink specials</p>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
                   <Calendar className="w-4 h-4" />
                   <span>Every Friday, 9PM - 1AM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-black border-[hsl(var(--district-red))]/20 overflow-hidden group">
+            <Card className="event-card bg-white border-[hsl(var(--district-green))]/20 overflow-hidden group shadow-lg">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/arcade-games-retro-neon.jpg"
                   alt="Retro Game Night"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[hsl(var(--district-blue))] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-[hsl(var(--district-green))] text-white text-xs font-bold px-3 py-1 rounded-full">
                     THURSDAYS
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-mono text-2xl font-bold text-white mb-2">Retro Game Night</h3>
-                <p className="text-gray-400 mb-4">Classic arcade tournaments with prizes</p>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Retro Game Night</h3>
+                <p className="text-gray-700 mb-4">Classic arcade tournaments with prizes</p>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
                   <Calendar className="w-4 h-4" />
                   <span>Every Thursday, 7PM - 11PM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-black border-[hsl(var(--district-red))]/20 overflow-hidden group">
+            <Card className="event-card bg-white border-[hsl(var(--district-purple))]/20 overflow-hidden group shadow-lg">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="/sports-bar-game-watching-crowd.jpg"
                   alt="Watch Party"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[hsl(var(--district-gold))] text-black text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-[hsl(var(--district-purple))] text-white text-xs font-bold px-3 py-1 rounded-full">
                     GAME DAYS
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-mono text-2xl font-bold text-white mb-2">Game Day Watch Parties</h3>
-                <p className="text-gray-400 mb-4">Big screens, cold drinks, and game-day specials</p>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Game Day Watch Parties</h3>
+                <p className="text-gray-700 mb-4">Big screens, cold drinks, and game-day specials</p>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
                   <Calendar className="w-4 h-4" />
                   <span>All Major Sporting Events</span>
                 </div>
@@ -309,7 +309,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button
               size="lg"
-              className="bg-[hsl(var(--district-red))] hover:bg-[hsl(var(--district-red))]/90 text-white px-8"
+              className="bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white px-8"
               asChild
             >
               <Link href="/events">View All Events</Link>
