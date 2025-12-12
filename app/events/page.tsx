@@ -74,40 +74,28 @@ export default function EventsPage() {
 
             <div className="space-y-6 max-w-4xl mx-auto">
               {[
-                { day: "Monday", event: "Industry Night", desc: "50% off for hospitality workers with valid ID", color: "blue" },
-                { day: "Tuesday", event: "Trivia Night", desc: "Test your knowledge, win prizes! 7PM start", color: "green" },
-                { day: "Wednesday", event: "Wine Down Wednesday", desc: "$6 all wines by the glass", color: "purple" },
+                { day: "Monday", event: "Industry Night", desc: "50% off for hospitality workers with valid ID", color: "orange" },
+                { day: "Tuesday", event: "Trivia Night", desc: "Test your knowledge, win prizes! 7PM start", color: "orange" },
+                { day: "Wednesday", event: "Wine Down Wednesday", desc: "$6 all wines by the glass", color: "yellow" },
                 { day: "Thursday", event: "Retro Game Night", desc: "Classic arcade tournaments with prizes", color: "orange" },
-                { day: "Friday", event: "Cosmic Bowling", desc: "Glow bowling with DJ 9PM-1AM", color: "pink" },
+                { day: "Friday", event: "Cosmic Bowling", desc: "Glow bowling with DJ 9PM-1AM", color: "orange" },
                 { day: "Saturday", event: "Live Music", desc: "Local bands every Saturday night", color: "yellow" },
-                { day: "Sunday", event: "Family Fun Day", desc: "Kids bowl free with adult purchase", color: "red" },
+                { day: "Sunday", event: "Family Fun Day", desc: "Kids bowl free with adult purchase", color: "cyan" },
               ].map((item, index) => {
                 const colorClasses = {
-                  blue: "border-blue-400 hover:border-blue-500",
-                  green: "border-green-400 hover:border-green-500",
-                  purple: "border-purple-400 hover:border-purple-500",
-                  orange: "border-orange-400 hover:border-orange-500",
-                  pink: "border-pink-400 hover:border-pink-500",
-                  yellow: "border-yellow-400 hover:border-yellow-500",
-                  red: "border-red-400 hover:border-red-500"
+                  orange: "border-[#fd812a] hover:border-[#fd812a]/80",
+                  yellow: "border-[#ffda00] hover:border-[#ffda00]/80",
+                  cyan: "border-[#02ffff] hover:border-[#02ffff]/80"
                 };
                 const dayColors = {
-                  blue: "text-blue-600",
-                  green: "text-green-600",
-                  purple: "text-purple-600",
-                  orange: "text-orange-600",
-                  pink: "text-pink-600",
-                  yellow: "text-yellow-600",
-                  red: "text-red-600"
+                  orange: "text-[#fd812a]",
+                  yellow: "text-[#ffda00]",
+                  cyan: "text-[#02ffff]"
                 };
                 const buttonColors = {
-                  blue: "border-blue-500 text-blue-600 hover:bg-blue-500",
-                  green: "border-green-500 text-green-600 hover:bg-green-500",
-                  purple: "border-purple-500 text-purple-600 hover:bg-purple-500",
-                  orange: "border-orange-500 text-orange-600 hover:bg-orange-500",
-                  pink: "border-pink-500 text-pink-600 hover:bg-pink-500",
-                  yellow: "border-yellow-500 text-yellow-600 hover:bg-yellow-500",
-                  red: "border-red-500 text-red-600 hover:bg-red-500"
+                  orange: "border-[#fd812a] text-[#fd812a] hover:bg-[#fd812a]",
+                  yellow: "border-[#ffda00] text-[#ffda00] hover:bg-[#ffda00]",
+                  cyan: "border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff]"
                 };
                 return (
                   <Card key={index} className={`bg-white border-4 p-6 ${colorClasses[item.color]} transition-all hover:shadow-lg`}>
