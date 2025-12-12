@@ -84,14 +84,14 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <a
                 href="tel:407-666-3002"
-                className="flex items-center gap-2 text-gray-700 hover:text-[hsl(var(--district-orange))] transition-colors"
+                className="flex items-center gap-2 text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all w-fit"
               >
                 <Phone className="w-4 h-4" />
                 407-666-3002
               </a>
               <a
                 href="mailto:info@districteatandplay.com"
-                className="flex items-center gap-2 text-gray-700 hover:text-[hsl(var(--district-orange))] transition-colors"
+                className="flex items-center gap-2 text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all w-fit"
               >
                 <Mail className="w-4 h-4" />
                 info@districteatandplay.com
@@ -103,7 +103,7 @@ export function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center hover:bg-[hsl(var(--district-orange))] text-gray-900 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center hover:from-blue-500 hover:to-blue-700 text-white transition-all hover:scale-110"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -111,7 +111,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center hover:bg-[hsl(var(--district-orange))] text-gray-900 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-orange-400 flex items-center justify-center hover:from-pink-500 hover:to-orange-500 text-white transition-all hover:scale-110"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -119,7 +119,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center hover:bg-[hsl(var(--district-orange))] text-gray-900 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center hover:from-cyan-500 hover:to-blue-600 text-white transition-all hover:scale-110"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -127,7 +127,7 @@ export function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center hover:bg-[hsl(var(--district-orange))] text-gray-900 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center hover:from-red-600 hover:to-pink-700 text-white transition-all hover:scale-110"
               >
                 <Youtube className="w-5 h-5" />
               </a>
