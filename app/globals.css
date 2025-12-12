@@ -3,49 +3,49 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Updated to bright light mode theme with vibrant District brand colors */
+/* Bright light mode theme with vibrant colors: orange, green, purple, pink */
 :root {
-  /* Bright light mode with vibrant District colors */
-  --background: oklch(0.99 0 0); /* bright white */
-  --foreground: oklch(0.15 0 0); /* near black for text */
+  /* Bright light mode with vibrant colors */
+  --background: oklch(0.98 0.01 264); /* very light blue-white */
+  --foreground: oklch(0.25 0 0); /* dark text */
   --card: oklch(1 0 0); /* pure white cards */
-  --card-foreground: oklch(0.15 0 0);
+  --card-foreground: oklch(0.25 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.533 0.264 29.234); /* vibrant red #E30613 as primary */
+  --popover-foreground: oklch(0.25 0 0);
+  --primary: oklch(0.6 0.24 29.234); /* vibrant orange #FF7A3D */
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.877 0.165 97.691); /* bright gold */
-  --secondary-foreground: oklch(0.15 0 0);
-  --muted: oklch(0.97 0.005 264); /* very light blue tint */
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.6 0.2 264.052); /* bright vibrant blue */
+  --secondary: oklch(0.65 0.22 137.352); /* vibrant green */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.92 0.02 264); /* light gray-blue */
+  --muted-foreground: oklch(0.4 0 0);
+  --accent: oklch(0.55 0.25 290); /* vibrant purple */
   --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.55 0.27 29.234);
+  --destructive: oklch(0.6 0.25 340); /* vibrant pink */
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0.01 264);
-  --input: oklch(0.95 0.01 264);
-  --ring: oklch(0.533 0.264 29.234);
-  --chart-1: oklch(0.65 0.25 29.234); /* vibrant red */
-  --chart-2: oklch(0.7 0.2 264.052); /* vibrant blue */
-  --chart-3: oklch(0.88 0.17 97.691); /* bright gold */
-  --chart-4: oklch(0.6 0.22 150); /* vibrant teal */
-  --chart-5: oklch(0.65 0.25 340); /* vibrant pink */
+  --border: oklch(0.88 0.03 264);
+  --input: oklch(0.95 0.02 264);
+  --ring: oklch(0.6 0.24 29.234);
+  --chart-1: oklch(0.6 0.24 29.234); /* vibrant orange */
+  --chart-2: oklch(0.65 0.22 137.352); /* vibrant green */
+  --chart-3: oklch(0.55 0.25 290); /* vibrant purple */
+  --chart-4: oklch(0.6 0.25 340); /* vibrant pink */
+  --chart-5: oklch(0.65 0.2 264.052); /* vibrant blue */
   --radius: 0.5rem;
-  --sidebar: oklch(0.98 0.01 29.234); /* light with red tint */
-  --sidebar-foreground: oklch(0.15 0 0);
-  --sidebar-primary: oklch(0.533 0.264 29.234);
+  --sidebar: oklch(0.96 0.02 264); /* light background */
+  --sidebar-foreground: oklch(0.25 0 0);
+  --sidebar-primary: oklch(0.6 0.24 29.234);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.95 0.02 29.234);
-  --sidebar-accent-foreground: oklch(0.15 0 0);
-  --sidebar-border: oklch(0.92 0.01 264);
-  --sidebar-ring: oklch(0.533 0.264 29.234);
+  --sidebar-accent: oklch(0.88 0.02 290);
+  --sidebar-accent-foreground: oklch(0.25 0 0);
+  --sidebar-border: oklch(0.88 0.03 264);
+  --sidebar-ring: oklch(0.6 0.24 29.234);
 
-  /* District specific brand colors - bright versions */
-  --district-black: oklch(0.15 0 0);
-  --district-red: oklch(0.533 0.264 29.234);
-  --district-white: oklch(1 0 0);
-  --district-blue: oklch(0.6 0.2 264.052);
-  --district-gold: oklch(0.877 0.165 97.691);
+  /* Vibrant brand colors */
+  --district-orange: oklch(0.6 0.24 29.234);
+  --district-green: oklch(0.65 0.22 137.352);
+  --district-purple: oklch(0.55 0.25 290);
+  --district-pink: oklch(0.6 0.25 340);
+  --district-blue: oklch(0.65 0.2 264.052);
 }
 
 .dark {
@@ -134,13 +134,13 @@
 }
 
 /* Custom District animations */
-@keyframes redGlow {
+@keyframes orangeGlow {
   0%,
   100% {
-    box-shadow: 0 0 20px oklch(0.533 0.264 29.234 / 0.5);
+    box-shadow: 0 0 20px oklch(0.6 0.24 29.234 / 0.5);
   }
   50% {
-    box-shadow: 0 0 40px oklch(0.533 0.264 29.234 / 0.8), 0 0 60px oklch(0.533 0.264 29.234 / 0.4);
+    box-shadow: 0 0 40px oklch(0.6 0.24 29.234 / 0.8), 0 0 60px oklch(0.6 0.24 29.234 / 0.4);
   }
 }
 
@@ -154,8 +154,8 @@
   }
 }
 
-.animate-red-glow {
-  animation: redGlow 2s ease-in-out infinite;
+.animate-orange-glow {
+  animation: orangeGlow 2s ease-in-out infinite;
 }
 
 .animate-float {
