@@ -186,11 +186,11 @@ export default function MenuPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-[hsl(var(--district-orange))] to-[hsl(var(--district-pink))]">
+        <section className="py-16 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="font-mono text-3xl font-bold text-white mb-4">Ready to Order?</h3>
-            <p className="text-white/90 mb-6">Visit us or call ahead for takeout</p>
-            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold">
+            <h3 className="font-mono text-3xl font-bold text-white mb-4 drop-shadow-lg">Ready to Order?</h3>
+            <p className="text-white/98 mb-6 font-semibold drop-shadow-md">Visit us or call ahead for takeout</p>
+            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-bold shadow-lg hover:shadow-xl transition-all">
               Call: 407-666-3002
             </Button>
           </div>
