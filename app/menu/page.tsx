@@ -99,7 +99,7 @@ export default function MenuPage() {
         </section>
 
         {/* Food Menu */}
-        <section id="food" className="py-20 bg-gradient-to-b from-white to-blue-50">
+        <section id="food" className="py-20 bg-gradient-to-b from-white via-orange-50 to-yellow-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
               <span className="text-[hsl(var(--district-orange))]">Food</span> Menu
