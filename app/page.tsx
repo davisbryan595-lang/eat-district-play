@@ -309,7 +309,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button
               size="lg"
-              className="bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white px-8"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="/events">View All Events</Link>
