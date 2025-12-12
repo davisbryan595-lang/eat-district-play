@@ -159,6 +159,9 @@ export function Navigation() {
               </div>
             ))}
             <div className="px-4 mt-4 space-y-2">
+              <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" onClick={() => { setLoginOpen(true); setIsOpen(false); }}>
+                Login
+              </Button>
               <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" asChild>
                 <Link href="/contact">Book Now</Link>
               </Button>
