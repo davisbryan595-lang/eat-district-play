@@ -79,8 +79,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Food Card */}
             <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500 animate-fade-in-scroll">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center mb-6 group-hover:from-orange-300 group-hover:to-orange-400 transition-all">
-                <Utensils className="w-10 h-10 text-orange-600 font-bold" />
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#fd812a]/20 to-[#fd812a]/30 flex items-center justify-center mb-6 group-hover:from-[#fd812a]/30 group-hover:to-[#fd812a]/40 transition-all">
+                <Utensils className="w-10 h-10 text-[#fd812a] font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">FOOD</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -89,7 +89,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-orange-600 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 font-bold p-0 transition-all"
+                className="text-[#fd812a] hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-orange-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#food">
@@ -99,7 +99,7 @@ export default function HomePage() {
             </Card>
 
             {/* Drinks Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-green-500">
+            <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-[#ffda00] p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-[#ffda00]/80 animate-fade-in-scroll">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center mb-6 group-hover:from-green-300 group-hover:to-green-400 transition-all">
                 <Wine className="w-10 h-10 text-green-600 font-bold" />
               </div>
