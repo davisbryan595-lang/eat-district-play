@@ -92,11 +92,11 @@ export default function GalleryPage() {
         )}
 
         {/* CTA */}
-        <section className="py-16 bg-[hsl(var(--district-red))]">
+        <section className="py-16 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="font-mono text-3xl font-bold text-white mb-4">Ready to Create Your Own Memories?</h3>
-            <p className="text-white/90 mb-6">Come experience District for yourself</p>
-            <button className="bg-white text-black hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <h3 className="font-mono text-3xl font-bold text-white mb-4 drop-shadow-lg">Ready to Create Your Own Memories?</h3>
+            <p className="text-white/98 mb-6 font-semibold drop-shadow-md">Come experience District for yourself</p>
+            <button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all">
               Book Your Visit
             </button>
           </div>
