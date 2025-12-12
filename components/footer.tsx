@@ -22,35 +22,35 @@ export function Footer() {
             <h4 className="font-mono text-lg font-bold mb-4 text-gray-900">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/menu" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
+                <Link href="/menu" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
                   Menu
                 </Link>
               </li>
               <li>
-                <Link href="/games" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
+                <Link href="/games" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
                   Games & Activities
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
+                <Link href="/events" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
                   Events & Parties
                 </Link>
               </li>
               <li>
                 <Link
                   href="/locations"
-                  className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block"
+                  className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block"
                 >
                   Locations
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
+                <Link href="/gallery" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
+                <Link href="/contact" className="text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all inline-block">
                   Contact Us
                 </Link>
               </li>
