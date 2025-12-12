@@ -105,13 +105,13 @@ export function Navigation() {
           <div className="hidden lg:flex items-center gap-3">
             <Button
               variant="outline"
-              className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white bg-transparent"
+              className="border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white bg-white font-bold transition-all"
               asChild
             >
               <Link href="/contact">Book Now</Link>
             </Button>
             <Button
-              className="bg-[hsl(var(--district-orange))] text-white hover:bg-[hsl(var(--district-orange))]/90 animate-orange-glow"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600 font-bold shadow-lg hover:shadow-xl transition-all"
               asChild
             >
               <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
