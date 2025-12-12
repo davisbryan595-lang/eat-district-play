@@ -162,7 +162,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-gradient-to-r from-[#fd812a] to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     FRIDAYS
                   </span>
                 </div>
@@ -171,19 +171,19 @@ export default function HomePage() {
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-2">Cosmic Bowling Night</h3>
                 <p className="text-gray-700 mb-4">Glow-in-the-dark bowling with DJ and drink specials</p>
                 <div className="flex items-center gap-2 text-sm text-gray-600 font-semibold">
-                  <Calendar className="w-4 h-4 text-orange-500" />
+                  <Calendar className="w-4 h-4 text-[#fd812a]" />
                   <span>Every Friday, 9PM - 1AM</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="event-card bg-white border-4 border-green-400 overflow-hidden group shadow-lg hover:shadow-xl hover:border-green-500 transition-all">
-              <div className="relative h-48 overflow-hidden">
-                <img
+            <Card className="event-card bg-white border-4 border-[#ffda00] overflow-hidden group shadow-lg hover:shadow-xl hover:border-[#ffda00]/80 transition-all animate-fade-in-scroll">
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                <Image
                   src="/arcade-games-retro-neon.jpg"
                   alt="Retro Game Night"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
