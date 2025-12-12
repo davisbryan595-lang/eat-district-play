@@ -34,7 +34,6 @@ export default function LocationsPage() {
 
   return (
     <>
-      <link rel="preload" as="image" href="/modern-entertainment-venue-exterior.jpg" />
       <Navigation />
 
       <div className="pt-20">
