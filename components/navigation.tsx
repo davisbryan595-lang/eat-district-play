@@ -5,11 +5,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { LoginModal } from "@/components/login-modal"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [loginOpen, setLoginOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,6 +49,7 @@ export function Navigation() {
   ]
 
   return (
+    <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "bg-white shadow-lg border-b-4 border-[#fd812a]" : "bg-white/95 backdrop-blur-md border-b-4 border-[#fd812a]/50"
@@ -103,6 +106,13 @@ export function Navigation() {
             <Button
               variant="outline"
               className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 bg-white font-bold transition-all"
+              onClick={() => setLoginOpen(true)}
+            >
+              Login
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/contact">Book Now</Link>
@@ -150,6 +160,9 @@ export function Navigation() {
               </div>
             ))}
             <div className="px-4 mt-4 space-y-2">
+              <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" onClick={() => { setLoginOpen(true); setIsOpen(false); }}>
+                Login
+              </Button>
               <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" asChild>
                 <Link href="/contact">Book Now</Link>
               </Button>
@@ -161,5 +174,8 @@ export function Navigation() {
         )}
       </div>
     </nav>
+
+    <LoginModal open={loginOpen} onOpenChange={setLoginOpen} />
+    </>
   )
 }
