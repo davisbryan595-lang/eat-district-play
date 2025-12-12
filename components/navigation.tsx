@@ -105,6 +105,13 @@ export function Navigation() {
             <Button
               variant="outline"
               className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 bg-white font-bold transition-all"
+              onClick={() => setLoginOpen(true)}
+            >
+              Login
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 bg-white font-bold transition-all"
               asChild
             >
               <Link href="/contact">Book Now</Link>
