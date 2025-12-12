@@ -16,73 +16,80 @@ export default function HomePage() {
   const eventsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Initialize GSAP animations after component mounts
-    if (typeof window !== "undefined" && window.gsap && window.ScrollTrigger) {
-      const gsap = window.gsap
-      const ScrollTrigger = window.ScrollTrigger
+    // Wait for GSAP to load before initializing animations
+    const loadGSAPAnimations = () => {
+      if (typeof window !== "undefined" && window.gsap && window.ScrollTrigger) {
+        const gsap = window.gsap
+        const ScrollTrigger = window.ScrollTrigger
 
-      gsap.registerPlugin(ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger)
 
-      // Hero animations
-      gsap.from(".hero-logo", {
-        scale: 0,
-        opacity: 0,
-        duration: 1,
-        delay: 0.5,
-        ease: "back.out(1.7)",
-      })
+        // Hero animations
+        gsap.from(".hero-logo", {
+          scale: 0,
+          opacity: 0,
+          duration: 1,
+          delay: 0.5,
+          ease: "back.out(1.7)",
+        })
 
-      gsap.from(".hero-tagline", {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        delay: 1,
-      })
-
-      gsap.from(".hero-cta", {
-        y: 30,
-        opacity: 0,
-        duration: 0.6,
-        delay: 1.3,
-      })
-
-      // Feature cards stagger
-      gsap.from(".feature-card", {
-        scrollTrigger: {
-          trigger: featuresRef.current,
-          start: "top 80%",
-        },
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-      })
-
-      // Events carousel
-      gsap.from(".event-card", {
-        scrollTrigger: {
-          trigger: eventsRef.current,
-          start: "top 80%",
-        },
-        x: 100,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-      })
-
-      // Section title animations
-      gsap.utils.toArray(".section-title").forEach((title: any) => {
-        gsap.from(title, {
-          scrollTrigger: {
-            trigger: title,
-            start: "top 85%",
-          },
-          x: -100,
+        gsap.from(".hero-tagline", {
+          y: 50,
           opacity: 0,
           duration: 0.8,
+          delay: 1,
         })
-      })
+
+        gsap.from(".hero-cta", {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          delay: 1.3,
+        })
+
+        // Feature cards stagger
+        gsap.from(".feature-card", {
+          scrollTrigger: {
+            trigger: featuresRef.current,
+            start: "top 80%",
+          },
+          y: 100,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+        })
+
+        // Events carousel
+        gsap.from(".event-card", {
+          scrollTrigger: {
+            trigger: eventsRef.current,
+            start: "top 80%",
+          },
+          x: 100,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+        })
+
+        // Section title animations
+        gsap.utils.toArray(".section-title").forEach((title: any) => {
+          gsap.from(title, {
+            scrollTrigger: {
+              trigger: title,
+              start: "top 85%",
+            },
+            x: -100,
+            opacity: 0,
+            duration: 0.8,
+          })
+        })
+      } else {
+        // GSAP not loaded yet, retry after 100ms
+        requestAnimationFrame(loadGSAPAnimations)
+      }
     }
+
+    loadGSAPAnimations()
   }, [])
 
   return (
@@ -119,8 +126,8 @@ export default function HomePage() {
             DISTRICT
           </h1>
 
-          <p className="hero-tagline text-2xl md:text-4xl text-[hsl(var(--district-orange))] font-bold mb-12 tracking-wide">
-            Eat. Drink. Play. Repeat.
+          <p className="hero-tagline text-2xl md:text-4xl font-bold mb-12 tracking-wide">
+            <span className="text-[#02ffff]">Eat.</span> <span className="text-[#ffda00]">Play.</span> <span className="text-[#fd812a]">Repeat.</span>
           </p>
 
           <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -239,6 +246,7 @@ export default function HomePage() {
                   src="/bowling-lanes-neon-lights.jpg"
                   alt="Cosmic Bowling"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
@@ -263,6 +271,7 @@ export default function HomePage() {
                   src="/arcade-games-retro-neon.jpg"
                   alt="Retro Game Night"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
@@ -287,6 +296,7 @@ export default function HomePage() {
                   src="/sports-bar-game-watching-crowd.jpg"
                   alt="Watch Party"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4">
