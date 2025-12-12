@@ -84,14 +84,14 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <a
                 href="tel:407-666-3002"
-                className="flex items-center gap-2 text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all w-fit"
+                className="flex items-center gap-2 text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 px-3 py-2 rounded-lg transition-all w-fit"
               >
                 <Phone className="w-4 h-4" />
                 407-666-3002
               </a>
               <a
                 href="mailto:info@districteatandplay.com"
-                className="flex items-center gap-2 text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 px-3 py-2 rounded-lg transition-all w-fit"
+                className="flex items-center gap-2 text-gray-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#02ffff] hover:to-pink-500 px-3 py-2 rounded-lg transition-all w-fit"
               >
                 <Mail className="w-4 h-4" />
                 info@districteatandplay.com
