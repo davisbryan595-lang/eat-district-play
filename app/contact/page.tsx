@@ -164,38 +164,38 @@ export default function ContactPage() {
 
               {/* Contact Info */}
               <div className="space-y-6">
-                <h2 className="font-mono text-3xl font-bold text-white mb-6">
-                  <span className="text-[hsl(var(--district-red))]">Get</span> In Touch
+                <h2 className="font-mono text-3xl font-bold text-gray-900 mb-6">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Get</span> In Touch
                 </h2>
 
-                <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-red))]/30 p-6">
-                  <h3 className="font-mono text-2xl font-bold text-white mb-4">Sanford, FL</h3>
+                <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-6 hover:border-orange-500 transition-all">
+                  <h3 className="font-mono text-2xl font-bold text-orange-600 mb-4">Sanford, FL</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
+                      <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-gray-300">123 Main Street</p>
-                        <p className="text-gray-300">Sanford, FL 32771</p>
+                        <p className="text-gray-700 font-semibold">123 Main Street</p>
+                        <p className="text-gray-700 font-semibold">Sanford, FL 32771</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-[hsl(var(--district-red))] flex-shrink-0" />
-                      <a href="tel:407-666-3002" className="text-[hsl(var(--district-red))] hover:underline">
+                      <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                      <a href="tel:407-666-3002" className="text-orange-600 hover:underline font-bold">
                         407-666-3002
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5 text-[hsl(var(--district-red))] flex-shrink-0" />
+                      <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
                       <a
                         href="mailto:sanford@districteatandplay.com"
-                        className="text-[hsl(var(--district-red))] hover:underline"
+                        className="text-orange-600 hover:underline font-bold"
                       >
                         sanford@districteatandplay.com
                       </a>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Clock className="w-5 h-5 text-[hsl(var(--district-red))] flex-shrink-0 mt-1" />
-                      <div className="text-gray-300">
+                      <Clock className="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" />
+                      <div className="text-gray-700 font-semibold">
                         <p>Mon-Thu: 11AM - 11PM</p>
                         <p>Fri-Sat: 11AM - 2AM</p>
                         <p>Sunday: 11AM - 10PM</p>
@@ -204,34 +204,34 @@ export default function ContactPage() {
                   </div>
                 </Card>
 
-                <Card className="bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-blue))]/30 p-6">
-                  <h3 className="font-mono text-2xl font-bold text-white mb-4">Salina, KS</h3>
+                <Card className="bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-6 hover:border-purple-500 transition-all">
+                  <h3 className="font-mono text-2xl font-bold text-purple-600 mb-4">Salina, KS</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-[hsl(var(--district-blue))] flex-shrink-0 mt-1" />
+                      <MapPin className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-gray-300">456 Oak Avenue</p>
-                        <p className="text-gray-300">Salina, KS 67401</p>
+                        <p className="text-gray-700 font-semibold">456 Oak Avenue</p>
+                        <p className="text-gray-700 font-semibold">Salina, KS 67401</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-[hsl(var(--district-blue))] flex-shrink-0" />
-                      <a href="tel:785-555-0123" className="text-[hsl(var(--district-blue))] hover:underline">
+                      <Phone className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                      <a href="tel:785-555-0123" className="text-purple-600 hover:underline font-bold">
                         785-555-0123
                       </a>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5 text-[hsl(var(--district-blue))] flex-shrink-0" />
+                      <Mail className="w-5 h-5 text-purple-500 flex-shrink-0" />
                       <a
                         href="mailto:salina@districteatandplay.com"
-                        className="text-[hsl(var(--district-blue))] hover:underline"
+                        className="text-purple-600 hover:underline font-bold"
                       >
                         salina@districteatandplay.com
                       </a>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Clock className="w-5 h-5 text-[hsl(var(--district-blue))] flex-shrink-0 mt-1" />
-                      <div className="text-gray-300">
+                      <Clock className="w-5 h-5 text-purple-500 flex-shrink-0 mt-1" />
+                      <div className="text-gray-700 font-semibold">
                         <p>Mon-Thu: 11AM - 11PM</p>
                         <p>Fri-Sat: 11AM - 1AM</p>
                         <p>Sunday: 12PM - 10PM</p>
