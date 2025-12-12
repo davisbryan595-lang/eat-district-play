@@ -103,7 +103,7 @@ export function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center hover:from-blue-500 hover:to-blue-700 text-white transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-[#fd812a] to-orange-600 flex items-center justify-center hover:from-[#fd812a]/90 hover:to-orange-700 text-white transition-all hover:scale-110"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -111,7 +111,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-orange-400 flex items-center justify-center hover:from-pink-500 hover:to-orange-500 text-white transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-[#ffda00] to-[#fd812a] flex items-center justify-center hover:from-[#ffda00]/90 hover:to-[#fd812a]/90 text-white transition-all hover:scale-110"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -119,7 +119,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center hover:from-cyan-500 hover:to-blue-600 text-white transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-[#02ffff] to-cyan-500 flex items-center justify-center hover:from-[#02ffff]/90 hover:to-cyan-600 text-gray-900 transition-all hover:scale-110"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -127,7 +127,7 @@ export function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center hover:from-red-600 hover:to-pink-700 text-white transition-all hover:scale-110"
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-[#fd812a] to-pink-600 flex items-center justify-center hover:from-[#fd812a]/90 hover:to-pink-700 text-white transition-all hover:scale-110"
               >
                 <Youtube className="w-5 h-5" />
               </a>
@@ -135,7 +135,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t-2 border-orange-300 mt-8 pt-8 text-center text-sm text-gray-700 font-semibold">
+        <div className="border-t-2 border-[#fd812a] mt-8 pt-8 text-center text-sm text-gray-700 font-semibold">
           <p>&copy; {new Date().getFullYear()} District Eat & Play. All rights reserved.</p>
         </div>
       </div>
