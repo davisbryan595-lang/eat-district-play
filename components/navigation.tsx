@@ -126,12 +126,12 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-4 border-t-2 border-orange-300 bg-gradient-to-b from-white to-orange-50">
             {menuItems.map((item) => (
               <div key={item.name} className="py-2">
                 <Link
                   href={item.href}
-                  className="block px-4 py-2 text-gray-800 font-semibold hover:text-[hsl(var(--district-orange))]"
+                  className="block px-4 py-2 text-gray-800 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 rounded-lg transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -142,7 +142,7 @@ export function Navigation() {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-4 py-1 text-sm text-gray-600 hover:text-[hsl(var(--district-orange))]"
+                        className="block px-4 py-1 text-sm text-gray-700 hover:text-orange-600 font-semibold"
                         onClick={() => setIsOpen(false)}
                       >
                         {subItem.name}
@@ -153,10 +153,10 @@ export function Navigation() {
               </div>
             ))}
             <div className="px-4 mt-4 space-y-2">
-              <Button variant="outline" className="w-full bg-transparent border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white" asChild>
+              <Button variant="outline" className="w-full bg-white border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white font-bold" asChild>
                 <Link href="/contact">Book Now</Link>
               </Button>
-              <Button className="w-full bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white" asChild>
+              <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold" asChild>
                 <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
               </Button>
             </div>
