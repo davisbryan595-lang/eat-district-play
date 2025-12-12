@@ -63,7 +63,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
+                        className="bg-white border-2 border-[#fd812a]/30 text-gray-900 font-semibold focus:border-[#fd812a]"
                         placeholder="Your name"
                       />
                     </div>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
+                        className="bg-white border-2 border-[#fd812a]/30 text-gray-900 font-semibold focus:border-[#fd812a]"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="bg-white border-2 border-orange-300 text-gray-900 font-semibold focus:border-orange-500"
+                        className="bg-white border-2 border-[#fd812a]/30 text-gray-900 font-semibold focus:border-[#fd812a]"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                         required
                         value={formData.location}
                         onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                        className="w-full bg-white border-2 border-orange-300 text-gray-900 rounded-lg px-3 py-2 font-semibold focus:border-orange-500"
+                        className="w-full bg-white border-2 border-[#fd812a]/30 text-gray-900 rounded-lg px-3 py-2 font-semibold focus:border-[#fd812a]"
                       >
                         <option value="sanford">Sanford, FL</option>
                         <option value="salina">Salina, KS</option>
