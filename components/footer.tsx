@@ -62,16 +62,16 @@ export function Footer() {
             <h4 className="font-mono text-lg font-bold mb-4 text-gray-900">Locations</h4>
             <div className="space-y-4">
               <div>
-                <p className="font-semibold text-orange-600 mb-1">Sanford, FL</p>
+                <p className="font-semibold text-[#fd812a] mb-1">Sanford, FL</p>
                 <p className="text-sm text-gray-700 flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" />
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#fd812a]" />
                   123 Main Street, Sanford, FL 32771
                 </p>
               </div>
               <div>
-                <p className="font-semibold text-purple-600 mb-1">Salina, KS</p>
+                <p className="font-semibold text-[#ffda00] mb-1">Salina, KS</p>
                 <p className="text-sm text-gray-700 flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-500" />
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#ffda00]" />
                   456 Oak Avenue, Salina, KS 67401
                 </p>
               </div>
