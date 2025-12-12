@@ -56,24 +56,24 @@ export default function GamesPage() {
 
       <div className="pt-20">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center bg-black">
+        <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
           <div className="absolute inset-0 opacity-30">
             <img src="/bowling-arcade-entertainment.jpg" alt="Games" className="w-full h-full object-cover" />
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="font-mono text-5xl md:text-7xl font-bold text-white mb-4">GAMES & ACTIVITIES</h1>
-            <p className="text-xl text-gray-300">Endless Entertainment Awaits</p>
+            <h1 className="font-mono text-5xl md:text-7xl font-bold text-gray-900 mb-4">GAMES & ACTIVITIES</h1>
+            <p className="text-xl text-gray-700">Endless Entertainment Awaits</p>
           </div>
         </section>
 
         {/* Activities Grid */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-gradient-to-b from-white to-blue-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {activities.map((activity, index) => (
                 <Card
                   key={index}
-                  className={`bg-gradient-to-br from-gray-900 to-black border-[hsl(var(--district-${activity.color}))]/30 overflow-hidden group hover:scale-105 transition-transform duration-300`}
+                  className={`bg-white border-[hsl(var(--district-${activity.color}))]/30 overflow-hidden group hover:scale-105 transition-transform duration-300 shadow-lg`}
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -81,16 +81,16 @@ export default function GamesPage() {
                       alt={activity.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="font-mono text-2xl font-bold text-white mb-1">{activity.name}</h3>
-                      <p className={`text-[hsl(var(--district-${activity.color}))] font-bold`}>{activity.price}</p>
+                      <p className={`text-white font-bold drop-shadow-md`}>{activity.price}</p>
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-gray-400 mb-4">{activity.description}</p>
+                    <p className="text-gray-700 mb-4">{activity.description}</p>
                     <Button
-                      className={`w-full bg-[hsl(var(--district-${activity.color}))] hover:bg-[hsl(var(--district-${activity.color}))]/90`}
+                      className={`w-full bg-[hsl(var(--district-${activity.color}))] hover:bg-[hsl(var(--district-${activity.color}))]/90 text-white`}
                       asChild
                     >
                       <Link href="/contact">Reserve Now</Link>
@@ -103,51 +103,51 @@ export default function GamesPage() {
         </section>
 
         {/* Party Packages */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <section className="py-20 bg-gradient-to-b from-blue-50 to-pink-50">
           <div className="container mx-auto px-4">
-            <h2 className="font-mono text-4xl md:text-5xl font-bold text-white text-center mb-12">
-              <span className="text-[hsl(var(--district-red))]">Party</span> Packages
+            <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
+              <span className="text-[hsl(var(--district-orange))]">Party</span> Packages
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-black border-[hsl(var(--district-red))]/30 p-8">
-                <h3 className="font-mono text-2xl font-bold text-white mb-4">Basic Package</h3>
-                <p className="text-4xl font-bold text-[hsl(var(--district-red))] mb-6">$299</p>
-                <ul className="space-y-3 text-gray-300 mb-8">
+              <Card className="bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/30 p-8 shadow-lg">
+                <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Basic Package</h3>
+                <p className="text-4xl font-bold text-[hsl(var(--district-orange))] mb-6">$299</p>
+                <ul className="space-y-3 text-gray-700 mb-8">
                   <li>• 2 hours of bowling (up to 10 people)</li>
                   <li>• Pizza & soft drinks</li>
                   <li>• $20 arcade card</li>
                   <li>• Private party area</li>
                 </ul>
-                <Button className="w-full bg-[hsl(var(--district-red))]" asChild>
+                <Button className="w-full bg-[hsl(var(--district-orange))] hover:bg-[hsl(var(--district-orange))]/90 text-white" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-black border-[hsl(var(--district-blue))]/30 p-8 ring-2 ring-[hsl(var(--district-blue))]/50">
+              <Card className="bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/30 p-8 ring-2 ring-[hsl(var(--district-green))]/50 shadow-lg">
                 <div className="text-center mb-4">
-                  <span className="bg-[hsl(var(--district-blue))] text-white px-4 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-[hsl(var(--district-green))] text-white px-4 py-1 rounded-full text-sm font-bold">
                     MOST POPULAR
                   </span>
                 </div>
-                <h3 className="font-mono text-2xl font-bold text-white mb-4">Premium Package</h3>
-                <p className="text-4xl font-bold text-[hsl(var(--district-blue))] mb-6">$599</p>
-                <ul className="space-y-3 text-gray-300 mb-8">
+                <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Premium Package</h3>
+                <p className="text-4xl font-bold text-[hsl(var(--district-green))] mb-6">$599</p>
+                <ul className="space-y-3 text-gray-700 mb-8">
                   <li>• 3 hours unlimited activities (up to 20)</li>
                   <li>• Full food & drink buffet</li>
                   <li>• $50 arcade card per person</li>
                   <li>• 1 hour axe throwing session</li>
                   <li>• Dedicated party host</li>
                 </ul>
-                <Button className="w-full bg-[hsl(var(--district-blue))]" asChild>
+                <Button className="w-full bg-[hsl(var(--district-green))] hover:bg-[hsl(var(--district-green))]/90 text-white" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-black border-[hsl(var(--district-gold))]/30 p-8">
-                <h3 className="font-mono text-2xl font-bold text-white mb-4">Ultimate Package</h3>
-                <p className="text-4xl font-bold text-[hsl(var(--district-gold))] mb-6">$999</p>
-                <ul className="space-y-3 text-gray-300 mb-8">
+              <Card className="bg-gradient-to-br from-white to-purple-50 border-[hsl(var(--district-purple))]/30 p-8 shadow-lg">
+                <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Ultimate Package</h3>
+                <p className="text-4xl font-bold text-[hsl(var(--district-purple))] mb-6">$999</p>
+                <ul className="space-y-3 text-gray-700 mb-8">
                   <li>• 4 hours full venue access (up to 30)</li>
                   <li>• Premium catering & open bar</li>
                   <li>• Unlimited arcade & activities</li>
@@ -156,7 +156,7 @@ export default function GamesPage() {
                   <li>• Party coordinator & staff</li>
                 </ul>
                 <Button
-                  className="w-full bg-[hsl(var(--district-gold))] text-black hover:bg-[hsl(var(--district-gold))]/90"
+                  className="w-full bg-[hsl(var(--district-purple))] hover:bg-[hsl(var(--district-purple))]/90 text-white"
                   asChild
                 >
                   <Link href="/contact">Book This Package</Link>
