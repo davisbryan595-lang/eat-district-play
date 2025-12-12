@@ -93,11 +93,11 @@ export default function LocationsPage() {
                     </div>
 
                     <div className="mt-8 flex gap-4">
-                      <Button className="flex-1 bg-[hsl(var(--district-red))]">
+                      <Button className={`flex-1 font-bold text-white ${index === 0 ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700" : "bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"}`}>
                         <NavigationIcon className="w-4 h-4 mr-2" />
                         Get Directions
                       </Button>
-                      <Button variant="outline" className="flex-1 bg-transparent">
+                      <Button variant="outline" className={`flex-1 font-bold border-2 ${index === 0 ? "border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white" : "border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white"}`}>
                         Call Now
                       </Button>
                     </div>
