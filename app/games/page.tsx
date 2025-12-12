@@ -118,32 +118,32 @@ export default function GamesPage() {
         <section className="py-20 bg-gradient-to-b from-purple-50 to-pink-50">
           <div className="container mx-auto px-4">
             <h2 className="font-mono text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              <span className="text-[hsl(var(--district-orange))]">Party</span> Packages
+              <span className="text-[#fd812a]">Party</span> Packages
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 shadow-lg hover:shadow-xl hover:border-orange-500 transition-all">
+              <Card className="bg-gradient-to-br from-white to-orange-100 border-4 border-[#fd812a] p-8 shadow-lg hover:shadow-xl hover:border-[#fd812a]/80 transition-all">
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Basic Package</h3>
-                <p className="text-4xl font-bold text-orange-600 mb-6">$299</p>
+                <p className="text-4xl font-bold text-[#fd812a] mb-6">$299</p>
                 <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 2 hours of bowling (up to 10 people)</li>
                   <li>• Pizza & soft drinks</li>
                   <li>• $20 arcade card</li>
                   <li>• Private party area</li>
                 </ul>
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold transition-all" asChild>
+                <Button className="w-full bg-gradient-to-r from-[#fd812a] to-orange-600 hover:from-[#fd812a]/90 hover:to-orange-700 text-white font-bold transition-all" asChild>
                   <Link href="/contact">Book This Package</Link>
                 </Button>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 ring-4 ring-green-300 shadow-lg hover:shadow-xl hover:border-green-500 transition-all">
+              <Card className="bg-gradient-to-br from-white to-yellow-100 border-4 border-[#ffda00] p-8 ring-4 ring-[#ffda00]/30 shadow-lg hover:shadow-xl hover:border-[#ffda00]/80 transition-all">
                 <div className="text-center mb-4">
-                  <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  <span className="bg-gradient-to-r from-[#ffda00] to-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">
                     MOST POPULAR
                   </span>
                 </div>
                 <h3 className="font-mono text-2xl font-bold text-gray-900 mb-4">Premium Package</h3>
-                <p className="text-4xl font-bold text-green-600 mb-6">$599</p>
+                <p className="text-4xl font-bold text-[#ffda00] mb-6">$599</p>
                 <ul className="space-y-3 text-gray-700 mb-8 font-semibold">
                   <li>• 3 hours unlimited activities (up to 20)</li>
                   <li>• Full food & drink buffet</li>
