@@ -159,9 +159,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Food Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-orange-50 border-[hsl(var(--district-orange))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-orange))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-orange))]/25 transition-colors">
-                <Utensils className="w-10 h-10 text-[hsl(var(--district-orange))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-orange-100 border-4 border-orange-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-orange-500">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center mb-6 group-hover:from-orange-300 group-hover:to-orange-400 transition-all">
+                <Utensils className="w-10 h-10 text-orange-600 font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">FOOD</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -170,7 +170,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-orange))] hover:text-white hover:bg-[hsl(var(--district-orange))]/20 p-0"
+                className="text-orange-600 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#food">
@@ -180,9 +180,9 @@ export default function HomePage() {
             </Card>
 
             {/* Drinks Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-green-50 border-[hsl(var(--district-green))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-green))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-green))]/25 transition-colors">
-                <Wine className="w-10 h-10 text-[hsl(var(--district-green))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-green-100 border-4 border-green-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-green-500">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center mb-6 group-hover:from-green-300 group-hover:to-green-400 transition-all">
+                <Wine className="w-10 h-10 text-green-600 font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">DRINKS</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -191,7 +191,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-green))] hover:text-white hover:bg-[hsl(var(--district-green))]/20 p-0"
+                className="text-green-600 hover:text-white hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/menu#drinks">
@@ -201,9 +201,9 @@ export default function HomePage() {
             </Card>
 
             {/* Games Card */}
-            <Card className="feature-card bg-gradient-to-br from-white to-purple-50 border-[hsl(var(--district-purple))]/30 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-[hsl(var(--district-purple))]/15 flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--district-purple))]/25 transition-colors">
-                <Gamepad2 className="w-10 h-10 text-[hsl(var(--district-purple))]" />
+            <Card className="feature-card bg-gradient-to-br from-white to-purple-100 border-4 border-purple-400 p-8 hover:scale-105 transition-transform duration-300 group shadow-lg hover:shadow-2xl hover:border-purple-500">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center mb-6 group-hover:from-purple-300 group-hover:to-purple-400 transition-all">
+                <Gamepad2 className="w-10 h-10 text-purple-600 font-bold" />
               </div>
               <h3 className="font-mono text-3xl font-bold text-gray-900 mb-4">GAMES</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -212,7 +212,7 @@ export default function HomePage() {
               </p>
               <Button
                 variant="ghost"
-                className="text-[hsl(var(--district-purple))] hover:text-white hover:bg-[hsl(var(--district-purple))]/20 p-0"
+                className="text-purple-600 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-600 font-bold p-0 transition-all"
                 asChild
               >
                 <Link href="/games">
