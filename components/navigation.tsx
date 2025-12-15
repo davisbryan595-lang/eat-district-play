@@ -1,9 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
+import gsap from "gsap"
 import { Button } from "@/components/ui/button"
 import { LoginModal } from "@/components/login-modal"
 
@@ -12,6 +13,9 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [loginOpen, setLoginOpen] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const submenuRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
+  const menuItemsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
