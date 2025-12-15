@@ -263,6 +263,13 @@ export function Navigation() {
                 >
                   <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
                 </Button>
+                <Button
+                  variant="outline"
+                  className="w-full bg-white border-2 border-purple-500 text-purple-600 hover:bg-purple-50 font-bold text-sm"
+                  asChild
+                >
+                  <Link href="/admin/login">Admin</Link>
+                </Button>
               </div>
             </div>
           </div>
