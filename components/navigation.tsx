@@ -15,7 +15,37 @@ export function Navigation() {
   const [loginOpen, setLoginOpen] = useState(false)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
   const submenuRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
-  const menuItemsRef = useRef<HTMLDivElement>(null)
+
+  const menuItems = [
+    { name: "Home", href: "/" },
+    {
+      name: "Menu",
+      href: "/menu",
+      submenu: [
+        { name: "Food", href: "/menu#food" },
+        { name: "Drinks", href: "/menu#drinks" },
+        { name: "Specials", href: "/menu#specials" },
+      ],
+    },
+    {
+      name: "Games & Activities",
+      href: "/games",
+      submenu: [
+        { name: "Bowling", href: "/games#bowling" },
+        { name: "Arcade", href: "/games#arcade" },
+        { name: "Axe Throwing", href: "/games#axe-throwing" },
+        { name: "VR Experience", href: "/games#vr" },
+      ],
+    },
+    { name: "Events & Parties", href: "/events" },
+    { name: "Locations", href: "/locations" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
+  ]
+
+  const toggleMobileDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,38 +97,7 @@ export function Navigation() {
         })
       }
     })
-  }, [activeDropdown])
-
-  const menuItems = [
-    { name: "Home", href: "/" },
-    {
-      name: "Menu",
-      href: "/menu",
-      submenu: [
-        { name: "Food", href: "/menu#food" },
-        { name: "Drinks", href: "/menu#drinks" },
-        { name: "Specials", href: "/menu#specials" },
-      ],
-    },
-    {
-      name: "Games & Activities",
-      href: "/games",
-      submenu: [
-        { name: "Bowling", href: "/games#bowling" },
-        { name: "Arcade", href: "/games#arcade" },
-        { name: "Axe Throwing", href: "/games#axe-throwing" },
-        { name: "VR Experience", href: "/games#vr" },
-      ],
-    },
-    { name: "Events & Parties", href: "/events" },
-    { name: "Locations", href: "/locations" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Contact", href: "/contact" },
-  ]
-
-  const toggleMobileDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName)
-  }
+  }, [activeDropdown, menuItems])
 
   return (
     <>
