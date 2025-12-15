@@ -185,42 +185,86 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t-2 border-[#fd812a] bg-gradient-to-b from-white to-orange-50">
-            {menuItems.map((item) => (
-              <div key={item.name} className="py-2">
-                <Link
-                  href={item.href}
-                  className="block px-4 py-2 text-gray-800 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 rounded-lg transition-all"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.submenu && (
-                  <div className="pl-8 space-y-2 mt-2">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-1 text-sm text-gray-700 hover:text-[#fd812a] font-semibold"
-                        onClick={() => setIsOpen(false)}
+          <div
+            ref={mobileMenuRef}
+            className="lg:hidden overflow-hidden border-t-2 border-[#fd812a] bg-gradient-to-b from-white to-orange-50"
+          >
+            <div className="py-4">
+              {menuItems.map((item) => (
+                <div key={item.name} className="py-2">
+                  <div className="flex items-center">
+                    <Link
+                      href={item.href}
+                      className="flex-1 px-4 py-2 text-gray-800 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-[#fd812a] hover:to-pink-500 rounded-lg transition-all block"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                    {item.submenu && (
+                      <button
+                        onClick={() => toggleMobileDropdown(item.name)}
+                        className="px-4 py-2 hover:text-[#fd812a] transition-colors"
+                        aria-label={`Toggle ${item.name} submenu`}
                       >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-300 ${
+                            activeDropdown === item.name ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    )}
                   </div>
-                )}
+                  {item.submenu && (
+                    <div
+                      ref={(el) => {
+                        if (el) submenuRefs.current[item.name] = el
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pl-8 space-y-2">
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-1 text-sm text-gray-700 hover:text-[#fd812a] font-semibold transition-colors"
+                            onClick={() => {
+                              setIsOpen(false)
+                              setActiveDropdown(null)
+                            }}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div className="px-4 mt-4 space-y-2">
+                <Button
+                  variant="outline"
+                  className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold"
+                  onClick={() => {
+                    setLoginOpen(true)
+                    setIsOpen(false)
+                  }}
+                >
+                  Login
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold"
+                  asChild
+                >
+                  <Link href="/contact">Book Now</Link>
+                </Button>
+                <Button
+                  className="w-full bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white font-bold"
+                  asChild
+                >
+                  <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
+                </Button>
               </div>
-            ))}
-            <div className="px-4 mt-4 space-y-2">
-              <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" onClick={() => { setLoginOpen(true); setIsOpen(false); }}>
-                Login
-              </Button>
-              <Button variant="outline" className="w-full bg-white border-2 border-[#02ffff] text-[#02ffff] hover:bg-[#02ffff] hover:text-gray-900 font-bold" asChild>
-                <Link href="/contact">Book Now</Link>
-              </Button>
-              <Button className="w-full bg-gradient-to-r from-[#fd812a] to-pink-500 hover:from-[#fd812a]/90 hover:to-pink-600 text-white font-bold" asChild>
-                <Link href="tel:407-666-3002">Call: 407-666-3002</Link>
-              </Button>
             </div>
           </div>
         )}
