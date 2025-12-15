@@ -25,6 +25,50 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Animate mobile menu open/close
+  useEffect(() => {
+    if (!mobileMenuRef.current) return
+
+    if (isOpen) {
+      gsap.fromTo(
+        mobileMenuRef.current,
+        { opacity: 0, height: 0 },
+        { opacity: 1, height: "auto", duration: 0.4, ease: "power2.out" }
+      )
+    } else {
+      gsap.to(mobileMenuRef.current, {
+        opacity: 0,
+        height: 0,
+        duration: 0.3,
+        ease: "power2.in",
+      })
+    }
+  }, [isOpen])
+
+  // Animate submenu dropdowns
+  useEffect(() => {
+    menuItems.forEach((item) => {
+      const submenuEl = submenuRefs.current[item.name]
+      if (!submenuEl) return
+
+      if (activeDropdown === item.name) {
+        gsap.fromTo(
+          submenuEl,
+          { opacity: 0, height: 0, marginTop: 0 },
+          { opacity: 1, height: "auto", marginTop: 8, duration: 0.3, ease: "back.out" }
+        )
+      } else {
+        gsap.to(submenuEl, {
+          opacity: 0,
+          height: 0,
+          marginTop: 0,
+          duration: 0.2,
+          ease: "power2.in",
+        })
+      }
+    })
+  }, [activeDropdown])
+
   const menuItems = [
     { name: "Home", href: "/" },
     {
