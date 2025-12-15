@@ -96,6 +96,10 @@ export function Navigation() {
     { name: "Contact", href: "/contact" },
   ]
 
+  const toggleMobileDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)
+  }
+
   return (
     <>
     <nav
